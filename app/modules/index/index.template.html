@@ -1,3 +1,35 @@
+<h1>Tabs</h1>
+<uib-tabset active="activeJustified" justified="true">
+    <uib-tab index="0" heading="Justified">Justified content</uib-tab>
+    <uib-tab index="1" heading="SJ">Short Labeled Justified content</uib-tab>
+    <uib-tab index="2" heading="Long Justified">Long Labeled Justified content</uib-tab>
+</uib-tabset>
+<hr/>
+<br>
+<hr/>
+<h1>Progressbar</h1>
+<button class="button" ng-click="index.randomizeProgreesBarVal()">Randomize {{index.progressBarType}}</button>
+<uib-progressbar value="index.progressBarVal" max="index.progressBarMax" type="{{index.progressBarType}}">
+    <span style="color:white; white-space:nowrap;">{{index.progressBarVal}} / {{index.progressBarMax}}</span>
+</uib-progressbar>
+<uib-progress>
+    <uib-bar value="index.progressBarVal" type="{{index.progressBarType}}">
+        <span style="color:white; white-space:nowrap;">{{index.progressBarVal}}</span>
+    </uib-bar>
+</uib-progress>
+<hr/>
+<br>
+<hr/>
+<h1>Popover</h1>
+<select ng-model="index.placement.selected" ng-options="o as o for o in index.placement.options"></select>
+<button uib-popover="I appeared on mouse enter!"
+        popover-placement="{{index.placement.selected}}"
+        type="button"
+        class="button">Show on {{index.placement.selected}}</button>
+<button uib-popover-template="index.dynamicPopover.templateUrl" popover-title="{{index.dynamicPopover.title}}" type="button" class="button">Popover With Template</button>
+<hr/>
+<br>
+<hr/>
 <h1>Pagination</h1>
 <h6><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code>:</h6>
 <ul uib-pagination

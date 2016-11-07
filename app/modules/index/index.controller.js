@@ -83,6 +83,54 @@
 		vm.paginationTotal = 177;
 		vm.paginationCurrent = 1;
 		vm.paginationMaxSize = 5;
+		
+		vm.dynamicPopover = {
+			title: 'Dynamic Popover Title',
+			content: 'Dynamic Popover Content',
+			templateUrl: 'modules/index/popover.template.html'
+		};
+		
+		vm.placement = {
+			options: [
+				'top',
+				'top-left',
+				'top-right',
+				'bottom',
+				'bottom-left',
+				'bottom-right',
+				'left',
+				'left-top',
+				'left-bottom',
+				'right',
+				'right-top',
+				'right-bottom'
+			],
+			selected: 'top'
+		};
+		
+		vm.progressBarMax = 200;
+		vm.randomizeProgreesBarVal = function() {
+			
+			var value = Math.floor(Math.random() * 100 + 1);
+			var type;
+			
+			if (value < 20) {
+				type = 'primary';
+			} else if (value < 40) {
+				type = 'secondary';
+			} else if (value < 60) {
+				type = 'success';
+			} else if (value < 85) {
+				type = 'warning';
+			} else {
+				type = 'alert';
+			}
+			
+			vm.progressBarType = type;
+			vm.progressBarVal = value;
+		};
+		vm.randomizeProgreesBarVal();
+		
 	}
 
 	/* @ngInject */
@@ -102,5 +150,5 @@
 		}
 
 	}
-
+	
 })();
