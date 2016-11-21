@@ -1,5 +1,4 @@
 [uib-dropdown] {
-  //display: inline-block;
   position: relative;
   ul {
     margin-bottom: 0;
@@ -32,8 +31,4 @@
   &.left {
     left: 0;
   }
-}
-button[uib-dropdown-toggle],
-.button[uib-dropdown-toggle] {
-  margin-bottom: 0;
 }

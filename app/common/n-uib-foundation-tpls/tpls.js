@@ -160,7 +160,7 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
 
 
   $templateCache.put('uib/template/datepickerPopup/popup.html',
-    "<div role=\"presentation\" class=\"dropdown-pane uib-datepicker-popup dropdown-menu uib-position-measure\" dropdown-nested ng-if=\"isOpen\" ng-keydown=\"keydown($event)\" ng-click=\"$event.stopPropagation()\">\n" +
+    "<div role=\"presentation\" class=\"uib-datepicker-popup uib-position-measure\" dropdown-nested ng-if=\"isOpen\" ng-keydown=\"keydown($event)\" ng-click=\"$event.stopPropagation()\">\n" +
     "    \n" +
     "    <div ng-transclude></div>\n" +
     "    \n" +
