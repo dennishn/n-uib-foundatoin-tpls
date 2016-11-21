@@ -34,12 +34,13 @@
         </tr>
         
         <tr>
-            <td class="form-group uib-time hours" ng-class="{'has-error': invalidHours}">
+            <td class="form-group uib-time hours">
                 <input type="text"
                        placeholder="HH"
                        ng-model="hours"
                        ng-change="updateHours()"
-                       class="form-control text-center"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidHours}"
                        ng-readonly="::readonlyInput"
                        maxlength="2"
                        tabindex="{{::tabindex}}"
@@ -47,12 +48,13 @@
                        ng-blur="blur()">
             </td>
             <td class="uib-separator">:</td>
-            <td class="form-group uib-time minutes" ng-class="{'has-error': invalidMinutes}">
+            <td class="form-group uib-time minutes">
                 <input type="text"
                        placeholder="MM"
                        ng-model="minutes"
                        ng-change="updateMinutes()"
-                       class="form-control text-center"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidMinutes}"
                        ng-readonly="::readonlyInput"
                        maxlength="2"
                        tabindex="{{::tabindex}}"
@@ -60,17 +62,18 @@
                        ng-blur="blur()">
             </td>
             <td ng-show="showSeconds" class="uib-separator">:</td>
-            <td class="form-group uib-time seconds" ng-class="{'has-error': invalidSeconds}" ng-show="showSeconds">
+            <td class="form-group uib-time seconds" ng-show="showSeconds">
                 <input type="text"
                        placeholder="SS"
                        ng-model="seconds"
                        ng-change="updateSeconds()"
-                       class="form-control text-center"
+                       class="text-center"
+                       ng-class="{'is-invalid-input': invalidSeconds}"
                        ng-readonly="readonlyInput"
                        maxlength="2"
                        tabindex="{{::tabindex}}"
-                       ng-disabled="noIncrementSeconds()" n
-                       g-blur="blur()">
+                       ng-disabled="noIncrementSeconds()"
+                       ng-blur="blur()">
             </td>
             <td ng-show="showMeridian" class="uib-time am-pm">
                 <button type="button"

@@ -345,16 +345,16 @@ angular.module('n.ui.foundation.tpls', []).run(['$templateCache', function($temp
     "        </tr>\n" +
     "        \n" +
     "        <tr>\n" +
-    "            <td class=\"form-group uib-time hours\" ng-class=\"{'has-error': invalidHours}\">\n" +
-    "                <input type=\"text\" placeholder=\"HH\" ng-model=\"hours\" ng-change=\"updateHours()\" class=\"form-control text-center\" ng-readonly=\"::readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementHours()\" ng-blur=\"blur()\">\n" +
+    "            <td class=\"form-group uib-time hours\">\n" +
+    "                <input type=\"text\" placeholder=\"HH\" ng-model=\"hours\" ng-change=\"updateHours()\" class=\"text-center\" ng-class=\"{'is-invalid-input': invalidHours}\" ng-readonly=\"::readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementHours()\" ng-blur=\"blur()\">\n" +
     "            </td>\n" +
     "            <td class=\"uib-separator\">:</td>\n" +
-    "            <td class=\"form-group uib-time minutes\" ng-class=\"{'has-error': invalidMinutes}\">\n" +
-    "                <input type=\"text\" placeholder=\"MM\" ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"form-control text-center\" ng-readonly=\"::readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementMinutes()\" ng-blur=\"blur()\">\n" +
+    "            <td class=\"form-group uib-time minutes\">\n" +
+    "                <input type=\"text\" placeholder=\"MM\" ng-model=\"minutes\" ng-change=\"updateMinutes()\" class=\"text-center\" ng-class=\"{'is-invalid-input': invalidMinutes}\" ng-readonly=\"::readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementMinutes()\" ng-blur=\"blur()\">\n" +
     "            </td>\n" +
     "            <td ng-show=\"showSeconds\" class=\"uib-separator\">:</td>\n" +
-    "            <td class=\"form-group uib-time seconds\" ng-class=\"{'has-error': invalidSeconds}\" ng-show=\"showSeconds\">\n" +
-    "                <input type=\"text\" placeholder=\"SS\" ng-model=\"seconds\" ng-change=\"updateSeconds()\" class=\"form-control text-center\" ng-readonly=\"readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementSeconds()\" n g-blur=\"blur()\">\n" +
+    "            <td class=\"form-group uib-time seconds\" ng-show=\"showSeconds\">\n" +
+    "                <input type=\"text\" placeholder=\"SS\" ng-model=\"seconds\" ng-change=\"updateSeconds()\" class=\"text-center\" ng-class=\"{'is-invalid-input': invalidSeconds}\" ng-readonly=\"readonlyInput\" maxlength=\"2\" tabindex=\"{{::tabindex}}\" ng-disabled=\"noIncrementSeconds()\" ng-blur=\"blur()\">\n" +
     "            </td>\n" +
     "            <td ng-show=\"showMeridian\" class=\"uib-time am-pm\">\n" +
     "                <button type=\"button\" ng-class=\"{disabled: noToggleMeridian()}\" class=\"button small secondary hollow\" ng-click=\"toggleMeridian()\" ng-disabled=\"noToggleMeridian()\" tabindex=\"{{::tabindex}}\">\n" +
