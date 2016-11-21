@@ -1,7 +1,7 @@
-<li ng-class="[{active: active, disabled: disabled}, classes]"
-    class="uib-tab nav-item">
-    <a href ng-click="select($event)"
-       class="nav-link"
+<li ng-class="[{'is-active': active, 'is-disabled': disabled}, classes]"
+    class="tabs-title">
+    <a ng-click="select($event)"
+       aria-selected="{{active}}"
        uib-tab-heading-transclude>
         {{heading}}
     </a>

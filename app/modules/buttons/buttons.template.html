@@ -1,0 +1,141 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Buttons</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">As a single button</p>
+    </div>
+    <div class="small-12 columns">
+        <pre>{{buttonsCtrl.singleModel}}</pre>
+    </div>
+    <div class="small-12 columns">
+        <button type="button"
+                class="button"
+                ng-model="buttonsCtrl.singleModel"
+                uib-btn-checkbox
+                btn-checkbox-true="1"
+                btn-checkbox-false="0">
+            Single Toggle
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">As Radio buttons</p>
+    </div>
+    <div class="small-12 columns">
+        <pre>{{buttonsCtrl.radioModel || 'null'}}</pre>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button type="button"
+                    class="button secondary"
+                    ng-model="buttonsCtrl.radioModel"
+                    uib-btn-radio="'Left'">
+                Left
+            </button>
+            <button type="button"
+                    class="button secondary"
+                    ng-model="buttonsCtrl.radioModel"
+                    uib-btn-radio="'Middle'">
+                Middle
+            </button>
+            <button type="button"
+                    class="button secondary"
+                    ng-model="buttonsCtrl.radioModel"
+                    uib-btn-radio="'Right'">
+                Right
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">As Checbox buttons</p>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+        <pre>Model:
+{{buttonsCtrl.checkBoxModel | json}}</pre>
+            </div>
+            <div class="small-12 medium-6 columns">
+        <pre>Results:
+{{buttonsCtrl.checkResults | json}}
+        </pre>
+            </div>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <div class="expanded button-group">
+            <button type="button"
+                    class="expanded button"
+                    ng-model="buttonsCtrl.checkBoxModel.default"
+                    uib-btn-checkbox>
+                default
+            </button>
+            <button type="button"
+                    class="expanded button success"
+                    ng-model="buttonsCtrl.checkBoxModel.success"
+                    uib-btn-checkbox>
+                success
+            </button>
+            <button type="button"
+                    class="expanded button warning"
+                    ng-model="buttonsCtrl.checkBoxModel.warning"
+                    uib-btn-checkbox>
+                warning
+            </button>
+            <button type="button"
+                    class="expanded button alert"
+                    ng-model="buttonsCtrl.checkBoxModel.alert"
+                    uib-btn-checkbox>
+                alert
+            </button>
+            <button type="button"
+                    class="expanded button secondary"
+                    ng-model="buttonsCtrl.checkBoxModel.secondary"
+                    uib-btn-checkbox>
+                secondary
+            </button>
+        
+            <button type="button"
+                    class="expanded button hollow"
+                    ng-model="buttonsCtrl.checkBoxModel.defaultHollow"
+                    uib-btn-checkbox>
+                default hollow
+            </button>
+            <button type="button"
+                    class="expanded button success hollow"
+                    ng-model="buttonsCtrl.checkBoxModel.successHollow"
+                    uib-btn-checkbox>
+                success hollow
+            </button>
+            <button type="button"
+                    class="expanded button warning hollow"
+                    ng-model="buttonsCtrl.checkBoxModel.warningHollow"
+                    uib-btn-checkbox>
+                warning hollow
+            </button>
+            <button type="button"
+                    class="expanded button alert hollow"
+                    ng-model="buttonsCtrl.checkBoxModel.alertHollow"
+                    uib-btn-checkbox>
+                alert hollow
+            </button>
+            <button type="button"
+                    class="expanded button secondary hollow"
+                    ng-model="buttonsCtrl.checkBoxModel.secondaryHollow"
+                    uib-btn-checkbox>
+                secondary hollow
+            </button>
+        </div>
+    </div>
+</div>
+
+

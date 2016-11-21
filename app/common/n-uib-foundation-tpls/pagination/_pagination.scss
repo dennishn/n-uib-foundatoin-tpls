@@ -1,5 +1,10 @@
 [uib-pagination] {
   @include pagination-container;
+
+  a {
+    user-select: none;
+  }
+
   .active a {
     @include pagination-item-current;
   }
@@ -10,7 +15,6 @@
       outline: none;
     }
   }
-
   .disabled a {
     color: inherit;
     display: block;

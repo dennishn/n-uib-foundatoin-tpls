@@ -24,6 +24,23 @@
 			'application',
 			'index',
 			'n.ui.foundation.tpls',
+			'accordion',
+			'alert',
+			'collapse',
+			'buttons',
+			'dropdown',
+			'modal',
+			'pagination',
+			'pager',
+			'popover',
+			'progressbar',
+			'tabs',
+			'tooltip',
+			'datepicker',
+			'datepickerPopup',
+			'rating',
+			'timepicker',
+			'typeahead',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

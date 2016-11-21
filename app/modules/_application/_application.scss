@@ -1,3 +1,31 @@
-.application {
+.docs-topbar {
+	display: flex;
+	justify-content: space-between;
 
+	background-color: $black;
+
+	.top-bar-title,
+	.top-bar-right {
+		float: none
+	}
+
+	.top-bar-title {
+		flex: 0 0 auto;
+
+		display: flex;
+		align-items: center;
+	}
+	.top-bar-right {
+		flex: 1;
+
+		display: flex;
+		justify-content: flex-end;
+	}
+	
+	ul {
+		background-color: $black;
+	}
+	[uib-dropdown-menu] {
+		border: none;
+	}
 }

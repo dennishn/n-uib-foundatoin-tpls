@@ -1,0 +1,112 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Pagination</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Default</p>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.totalItems"
+            ng-model="paginationCtrl.currentPage"
+            ng-change="paginationCtrl.pageChanged()">
+        </ul>
+    </div>
+    <div class="small-12 columns  text-center">
+        <ul uib-pagination
+            boundary-links="true"
+            total-items="paginationCtrl.totalItems"
+            ng-model="paginationCtrl.currentPage"
+            previous-text="&lsaquo;"
+            next-text="&rsaquo;"
+            first-text="&laquo;"
+            last-text="&raquo;">
+        </ul>
+    </div>
+    <div class="small-12 columns  text-center">
+        <ul uib-pagination 
+            direction-links="false" 
+            boundary-links="true" 
+            total-items="paginationCtrl.totalItems" 
+            ng-model="paginationCtrl.currentPage">
+        </ul>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination 
+            direction-links="false" 
+            total-items="paginationCtrl.totalItems" 
+            ng-model="paginationCtrl.currentPage" 
+            num-pages="paginationCtrl.numPages">
+        </ul>
+    </div>
+    <div class="small-12 columns text-center">
+        <pre>The selected page no: {{paginationCtrl.currentPage}}</pre>
+        <button type="button" class="button" ng-click="paginationCtrl.setPage(3)">Set current page to: 3</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">
+            Limit the maximum visible buttons
+        </p>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.bigTotalItems"
+            ng-model="paginationCtrl.bigCurrentPage"
+            max-size="paginationCtrl.maxSize"
+            boundary-links="true"
+            num-pages="paginationCtrl.numPages">
+        </ul>
+        <p><em><code>rotate</code> defaulted to <code>true</code></em></p>
+        <br><br>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.bigTotalItems"
+            ng-model="paginationCtrl.bigCurrentPage"
+            max-size="paginationCtrl.maxSize"
+            boundary-links="true"
+            force-ellipses="true">
+        </ul>
+        <p><em><code>rotate</code> defaulted to <code>true</code> and <code>force-ellipses</code> set to <code>true</code></em></p>
+        <br><br>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.bigTotalItems"
+            ng-model="paginationCtrl.bigCurrentPage"
+            max-size="paginationCtrl.maxSize"
+            boundary-links="true"
+            rotate="false">
+        </ul>
+        <p><em><code>rotate</code> set to <code>false</code></em></p>
+        <br><br>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.bigTotalItems"
+            ng-model="paginationCtrl.bigCurrentPage"
+            max-size="paginationCtrl.maxSize"
+            boundary-link-numbers="true">
+        </ul>
+        <p><em><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> defaulted to <code>true</code></em></p>
+    </div>
+    <div class="small-12 columns text-center">
+        <ul uib-pagination
+            total-items="paginationCtrl.bigTotalItems"
+            ng-model="paginationCtrl.bigCurrentPage"
+            max-size="paginationCtrl.maxSize"
+            boundary-link-numbers="true"
+            rotate="false">
+        </ul>
+        <p><em><code>boundary-link-numbers</code> set to <code>true</code> and <code>rotate</code> set to <code>false</code></em></p>
+    </div>
+    <div class="small-12 columns text-center">
+        <pre>Page: {{paginationCtrl.bigCurrentPage}} / {{paginationCtrl.numPages}}</pre>
+    </div>
+</div>

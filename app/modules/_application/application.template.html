@@ -1,2 +1,95 @@
-<p>This is the application view.</p>
+<div class="top-bar docs-topbar">
+    <div class="top-bar-title">
+        <a ui-sref="application.index">
+            <strong>n-uib-foundation-tpls</strong>
+        </a>
+    </div>
+    <div class="top-bar-right">
+        
+        <ul class="menu">
+            <li uib-dropdown
+                is-open="application.directiveDropdownOpen"
+                ng-mouseover="application.directiveDropdownOpen = true;"
+                ng-mouseleave="application.directiveDropdownOpen = false;">
+                <a href="">
+                    Directives +
+                </a>
+                <ul class="menu vertical bottom right" uib-dropdown-menu>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.accordion">Accordion</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.alert">Alert</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.buttons">Buttons</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.collapse">Collapse</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.datepicker">Datepicker</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.datepicker-popup">Datepicker Popup</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.dropdown">Dropdown</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.modal">Modal</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.pager">Pager</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.pagination">Pagination</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.popover">Popover</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.progressbar">Progressbar</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.rating">Rating</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.tabs">Tabs</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.timepicker">Timepicker</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.tooltip">Tooltip</a>
+                    </li>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.typeahead">Typeahead</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        
+        <ul class="menu">
+            <li uib-dropdown is-open="application.experimentsDropdownOpen"
+                ng-mouseover="application.experimentsDropdownOpen = true;"
+                ng-mouseleave="application.experimentsDropdownOpen = false;">
+                <a href="">
+                    Experiments +
+                </a>
+                <ul class="menu vertical bottom right" uib-dropdown-menu>
+                    <li>
+                        <a href="">
+                            <em>
+                                Coming Soon...
+                            </em>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+    </div>
+    
+</div>
 <div ui-view="application"></div>

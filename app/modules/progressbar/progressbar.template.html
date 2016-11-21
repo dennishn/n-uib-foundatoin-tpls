@@ -1,0 +1,80 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>
+            Progressbar
+        </h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Static</p>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-4 columns">
+                <uib-progress>
+                    <uib-bar value="66" type="warning"></uib-bar>
+                    <uib-bar value="10"></uib-bar>
+                </uib-progress>
+            </div>
+            <div class="small-12 medium-4 columns">
+                <uib-progressbar value="22" type="warning">
+                    22%
+                </uib-progressbar>
+            </div>
+            <div class="small-12 medium-4 columns">
+                <uib-progressbar max="200" value="166" type="alert">
+                    <i>166 / 200</i>
+                </uib-progressbar>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Dynamic</p>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-4 columns">
+                <p>&nbsp;</p>
+                <uib-progressbar max="progressbarCtrl.max" value="progressbarCtrl.dynamic">
+                    <span style="color:white; white-space:nowrap;">{{progressbarCtrl.dynamic}} / {{progressbarCtrl.max}}</span>
+                </uib-progressbar>
+            </div>
+            <div class="small-12 medium-4 columns">
+                <p>No animation</p>
+                <uib-progressbar animate="false" value="progressbarCtrl.dynamic" type="success">
+                    <b>{{progressbarCtrl.dynamic}}%</b>
+                </uib-progressbar>
+            </div>
+            <div class="small-12 medium-4 columns">
+                <p>Object (changes type based on value)</p>
+                <uib-progressbar value="progressbarCtrl.dynamic" type="{{progressbarCtrl.type}}">
+                    {{progressbarCtrl.type}} <i ng-show="progressbarCtrl.showWarning">!!! Watch out !!!</i>
+                </uib-progressbar>
+            </div>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <button class="button" ng-click="progressbarCtrl.random()">Randomize</button>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Stacked</p>
+    </div>
+    <div class="small-12 columns">
+        <uib-progress>
+            <uib-bar ng-repeat="bar in progressbarCtrl.stacked track by $index" value="bar.value" type="{{bar.type}}">
+                <span ng-hide="bar.value < 5">{{bar.value}}%</span>
+            </uib-bar>
+        </uib-progress>
+    </div>
+    <div class="small-12 columns">
+        <button type="button" class="button" ng-click="progressbarCtrl.randomStacked()">Randomize</button>
+    </div>
+</div>
+

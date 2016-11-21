@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Datepicker</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <div style="display:inline-block;">
+            <div uib-datepicker
+                 ng-model="datepickerCtrl.dt"
+                 datepicker-options="datepickerCtrl.options"></div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <pre>Selected date is: <em>{{datepickerCtrl.dt | date:'fullDate' }}</em></pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <button type="button" class="button" ng-click="datepickerCtrl.today()">Today</button>
+        <button type="button" class="button secondary" ng-click="datepickerCtrl.setDate(2009, 7, 24)">2009-08-24</button>
+        <button type="button" class="button alert" ng-click="datepickerCtrl.clear()">Clear</button>
+        <button type="button" class="button" ng-click="datepickerCtrl.toggleMin()" uib-tooltip="After today restriction">Min date</button>
+    </div>
+</div>

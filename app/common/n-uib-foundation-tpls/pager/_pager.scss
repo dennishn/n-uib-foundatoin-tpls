@@ -1,13 +1,16 @@
 [uib-pager] {
   @include pagination-container;
 
+  a {
+    user-select: none;
+  }
+
   .disabled {
     @include pagination-item-disabled;
     &:focus {
       outline: none;
     }
   }
-
   .disabled a {
     color: inherit;
     display: block;

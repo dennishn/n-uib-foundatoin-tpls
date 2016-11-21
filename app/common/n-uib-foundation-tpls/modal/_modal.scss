@@ -18,25 +18,26 @@ body.modal-open {
 }
 
 // Mimic the default animation of the Bootstrap Modal.
-.modal {
+.modal[modal-animation="true"] {
   transition: opacity .3s ease-out;
   opacity: 0;
+  will-change: opacity, transform;
   .reveal {
     transition: transform .3s ease-out;
-    transform: translate(0, -25%);
+    transform: translate3d(0, -25%, 0);
   }
 }
-.modal.in {
+.modal[modal-animation="true"].in {
   opacity: 1;
   .reveal {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
-.modal-backdrop {
+.modal-backdrop[modal-animation="true"] {
   transition: opacity .15s linear;
   opacity: 0;
 }
-.modal-backdrop.in {
+.modal-backdrop[modal-animation="true"].in {
   opacity: 1;
 }

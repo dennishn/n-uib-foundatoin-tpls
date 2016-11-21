@@ -1,0 +1,74 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Rating</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <span uib-rating
+              ng-model="ratingCtrl.rate"
+              max="ratingCtrl.max"
+              read-only="ratingCtrl.isReadonly"
+              on-hover="ratingCtrl.hoveringOver(value)"
+              on-leave="ratingCtrl.overStar = null"
+              titles="['one','two','three']"
+              aria-labelledby="default-rating">
+        </span>
+    
+        <span class="label"
+              ng-class="{'alert': ratingCtrl.percent<30, 'warning': ratingCtrl.percent>=30 && ratingCtrl.percent<70, 'success': ratingCtrl.percent>=70}"
+              ng-show="ratingCtrl.overStar && !ratingCtrl.isReadonly">
+            {{ratingCtrl.percent}}%
+        </span>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <pre>Rate: <b>{{ratingCtrl.rate}}</b> - Readonly is: <i>{{ratingCtrl.isReadonly}}</i> - Hovering over: <b>{{ratingCtrl.overStar || "none"}}</b></pre>
+    </div>
+    <div class="small-12 columns">
+        <button type="button"
+                class="button"
+                ng-click="ratingCtrl.rate = 0"
+                ng-disabled="ratingCtrl.isReadonly">
+            Clear
+        </button>
+        <button type="button"
+                class="button alert"
+                ng-click="ratingCtrl.isReadonly = !ratingCtrl.isReadonly">
+            Toggle Readonly
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <p class="lead">Custom Icons</p>
+    <div class="small-12 columns">
+        <div ng-init="x = 5">
+            <span uib-rating
+                  ng-model="x"
+                  max="15"
+                  state-on="'favorite'"
+                  state-off="'favorite_border'"
+                  aria-labelledby="custom-icons-1">
+            </span>
+            <b>(<i>Rate:</i> {{x}})</b>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <div ng-init="y = 2">
+            <span uib-rating
+                  ng-model="y"
+                  rating-states="ratingCtrl.ratingStates"
+                  aria-labelledby="custom-icons-2">
+            </span>
+            <b>(<i>Rate:</i> {{y}})</b>
+        </div>
+    </div>
+</div>

@@ -1,3 +1,11 @@
+.progress {
+  overflow: hidden;
+}
+
+.progress-meter {
+  float: left;
+}
+
 // Mimic transition from Bootstrap
 .progress-meter {
   transition: width .6s ease;

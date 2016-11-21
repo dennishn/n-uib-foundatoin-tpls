@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Pager</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Pager</p>
+    </div>
+    <div class="small-12 columns">
+        <pre>You are currently on page {{pagerCtrl.pagerCurrent}}</pre>
+        <ul uib-pager total-items="pagerCtrl.pagerTotal" ng-model="pagerCtrl.pagerCurrent"></ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">You can center it too, np</p>
+    </div>
+    <div class="small-12 columns">
+        <pre>You are currently on page {{pagerCtrl.pagerCurrent}}</pre>
+        <ul uib-pager class="text-center" total-items="pagerCtrl.pagerTotal" ng-model="pagerCtrl.pagerCurrent"></ul>
+    </div>
+</div>

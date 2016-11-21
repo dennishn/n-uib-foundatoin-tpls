@@ -1,0 +1,125 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Tooltip</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <label>
+            Tooltip placement
+            <select ng-model="tooltipCtrl.placement.selected" ng-options="o as o for o in tooltipCtrl.placement.options"></select>
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <button tooltip-placement="{{tooltipCtrl.placement.selected}}"
+                uib-tooltip="On the {{tooltipCtrl.placement.selected}}"
+                type="button"
+                class="button">
+            Tooltip {{tooltipCtrl.placement.selected}}
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 medium-6 columns">
+        <label>
+            Dynamic Tooltip Text
+            <input type="text" ng-model="tooltipCtrl.dynamicTooltipText">
+        </label>
+        <label>
+            Dynamic Tooltip Popup Text
+            <input type="text" ng-model="tooltipCtrl.dynamicTooltip">
+        </label>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>&nbsp;</label>
+        <p>
+            Pellentesque <a href="#" uib-tooltip="{{tooltipCtrl.dynamicTooltip}}">{{tooltipCtrl.dynamicTooltipText}}</a>,
+            sit amet venenatis urna cursus eget nunc scelerisque viverra mauris, in
+            aliquam. Tincidunt lobortis feugiat vivamus at
+            <a href="#" tooltip-animation="false" uib-tooltip="I don't fade. :-(">fading</a>
+            eget arcu dictum varius duis at consectetur lorem. Vitae elementum curabitur
+            <a href="#" tooltip-popup-delay='1000' uib-tooltip='appears with delay'>show delay</a>
+            nunc sed velit dignissim sodales ut eu sem integer vitae. Turpis egestas
+            <a href="#" tooltip-popup-close-delay='1000' tooltip-placement="top-left" uib-tooltip='hides with delay'>hide delay</a>
+            pharetra convallis posuere morbi leo urna,
+            <a href="#" uib-tooltip-template="'myTooltipTemplate.html'">Custom template</a>
+            at elementum eu, facilisis sed odio morbi quis commodo odio.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            I can even contain HTML as a
+            <a href="#" uib-tooltip-html="tooltipCtrl.htmlTooltip">scope variable</a> or
+            <a href="#" uib-tooltip-html="'static. {{tooltipCtrl.dynamicTooltipText}}. <b>bold.</b>'">inline string</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            <style>
+                /* Specify styling for tooltip contents */
+                .tooltip.customClass .tooltip-inner {
+                    color: #880000;
+                    background-color: #ffff66;
+                    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+                }
+                /* Hide arrow */
+                .tooltip.customClass:before,
+                .tooltip.customClass:after {
+                    display: none;
+                }
+            </style>
+            I can have a custom class. <a href="#" uib-tooltip="I can have a custom class applied to me!" tooltip-class="customClass">Check me out!</a>
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-10 medium-6 columns">
+        <div class="form-group">
+            <label>
+                Or use custom triggers, like focus:
+                <input type="text" value="Click me!" uib-tooltip="See? Now click away..." tooltip-trigger="'focus'" tooltip-placement="right"/>
+            </label>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-10 medium-6 columns">
+        <label ng-class="{'is-invalid-label' : !tooltipCtrl.inputModel}">
+            Disable tooltips conditionally:
+            <input type="text"
+                   ng-model="tooltipCtrl.inputModel"
+                   ng-class="{'is-invalid-input' : !tooltipCtrl.inputModel}"
+                   placeholder="Hover over this for a tooltip until this is filled"
+                   uib-tooltip="Enter something in this input field to disable this tooltip"
+                   tooltip-placement="top"
+                   tooltip-trigger="'mouseenter'"
+                   tooltip-enable="!tooltipCtrl.inputModel" />
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <label>
+            Open tooltips <span uib-tooltip="Hello!" tooltip-is-open="tooltipCtrl.tooltipIsOpen" tooltip-placement="top">conditionally.</span>
+        </label>
+        <button class="button" ng-click="tooltipCtrl.tooltipIsOpen = !tooltipCtrl.tooltipIsOpen">Toggle tooltip</button>
+    </div>
+</div>
+
+
+<div class="form-group">
+    
+</div>
+<script type="text/ng-template" id="myTooltipTemplate.html">
+    <span>Special Tooltip with <strong>markup</strong> and {{tooltipCtrl.dynamicTooltipText}}</span>
+</script>

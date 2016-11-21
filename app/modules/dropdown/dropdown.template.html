@@ -1,0 +1,261 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Dropdowns</h3>
+        <p>Feel free to use .dropdown-pane, or .menu from Foundation - or anything really - but these examples looks great out-of-the-box.</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Positioning</p>
+        <p>To position a dropdown, add class to the uib-dropdown-menu element</p>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-6 medium-offset-3 columns">
+                <div uib-dropdown>
+                    <button uib-dropdown-toggle
+                            class="button expanded"
+                            style="margin: 25px 0;"
+                            type="button">
+                        .top.left
+                    </button>
+                    <ul class="menu vertical top left" uib-dropdown-menu>
+                        <li><a href="#">Foo</a></li>
+                        <li><a href="#">Bar</a></li>
+                        <li><a href="#">Baz</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="small-12 medium-6 medium-offset-3 columns">
+                <div uib-dropdown>
+                    <button uib-dropdown-toggle
+                            class="button expanded"
+                            style="margin: 25px 0;"
+                            type="button">
+                        .top.right
+                    </button>
+                    <div class="dropdown-pane top right" uib-dropdown-menu>
+                        Just some junk that needs to be said. Or not. Your choice.
+                    </div>
+                </div>
+            </div>
+    
+            <div class="small-12 medium-6 medium-offset-3 columns">
+                <div uib-dropdown>
+                    <button uib-dropdown-toggle
+                            class="button expanded"
+                            style="margin: 25px 0;"
+                            type="button">
+                        .bottom.left
+                    </button>
+                    <ul class="menu vertical bottom left" uib-dropdown-menu>
+                        <li><a href="#">Foo</a></li>
+                        <li><a href="#">Bar</a></li>
+                        <li><a href="#">Baz</a></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="small-12 medium-6 medium-offset-3 columns">
+                <div uib-dropdown>
+                    <button uib-dropdown-toggle
+                            class="button expanded"
+                            style="margin: 25px 0;"
+                            type="button">
+                        .bottom.right
+                    </button>
+                    <div class="dropdown-pane bottom right" uib-dropdown-menu>
+                        Just some junk that needs to be said. Or not. Your choice.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 25px;">
+    <div class="small-12 columns">
+        <p class="lead">Keyboard Navigation</p>
+        <p>Obviously this is intended for actual menus. Currently unstyled except for focus. Requires speficic keyboard event implementations if you want to use this.</p>
+    </div>
+    <div class="small-12 columns">
+        <div uib-dropdown keyboard-nav>
+            <button uib-dropdown-toggle
+                    class="button"
+                    type="button">
+                I can be navigated with the keyboard !
+            </button>
+            <ul class="menu vertical bottom left" uib-dropdown-menu>
+                <li><a href="#">Foo</a></li>
+                <li><a href="#">Bar</a></li>
+                <li><a href="#">Baz</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">append-to-body vs. inline example</p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <div uib-dropdown dropdown-append-to-body>
+            <button uib-dropdown-toggle
+                    class="button expanded"
+                    style="margin-bottom: 25px;"
+                    type="button">
+                Append to body
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <div uib-dropdown>
+            <button uib-dropdown-toggle
+                    class="button expanded"
+                    type="button">
+                Inline
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 25px;">
+    <div class="small-12 columns">
+        <p class="lead">auto-close</p>
+    </div>
+    <div class="small-12 medium-4 columns">
+        <div uib-dropdown auto-close="always">
+            <button uib-dropdown-toggle
+                    class="button expanded"
+                    type="button">
+                always
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+    <div class="small-12 medium-4 columns">
+        <div uib-dropdown auto-close="outsideClick">
+            <button uib-dropdown-toggle
+                    class="button expanded"
+                    type="button">
+                outsideClick
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+    <div class="small-12 medium-4 columns">
+        <div uib-dropdown auto-close="disabled">
+            <button uib-dropdown-toggle
+                    class="button expanded"
+                    type="button">
+                disabled
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 25px;">
+    <div class="small-12 columns">
+        <p class="lead">is-open</p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <div uib-dropdown is-open="dropdownCtrl.isOpen">
+            <button uib-dropdown-toggle
+                    class="button secondary"
+                    type="button">
+                I can be triggered programatically!
+            </button>
+            <div class="dropdown-pane" uib-dropdown-menu>
+                Just some junk that needs to be said. Or not. Your choice.
+            </div>
+        </div>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <button class="button expanded" ng-click="dropdownCtrl.toggleIsOpen()"><<< Trigger secondary button dropdown</button>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <div uib-dropdown on-toggle="dropdownCtrl.onToggle(open)">
+                    <button uib-dropdown-toggle
+                            class="button"
+                            type="button">
+                        I have a callback
+                    </button>
+                    <div class="dropdown-pane" uib-dropdown-menu>
+                        Just some junk that needs to be said. Or not. Your choice.
+                    </div>
+                </div>
+            </div>
+            <div class="small-12 medium-6 columns">
+<pre>
+{{dropdownCtrl.onToggleLog | json}}
+</pre>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row" style="margin-bottom: 25px;">
+    <div class="small-12 columns">
+        <p class="lead">Hover</p>
+        <p>
+            Use it the programattic way. Make sure to add your event listeners to the parent wrapping element, and make sure to apply appropriate layout based styling (like having the wrapping element act like an inline-block element!).
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div uib-dropdown is-open="dropdownCtrl.hoverIsOpen"
+             style="display: inline-block;"
+             ng-mouseover="dropdownCtrl.hoverIsOpen = true;"
+             ng-mouseleave="dropdownCtrl.hoverIsOpen = false;">
+            <button class="button"
+                    uib-dropdown-toggle
+                    type="button">
+                Hover me
+            </button>
+            <ul class="menu vertical bottom left" uib-dropdown-menu>
+                <li><a href="#">Foo</a></li>
+                <li><a href="#">Bar</a></li>
+                <li><a href="#">Baz</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">uib-dropdown-menu template</p>
+    </div>
+    <div class="small-12 columns">
+        <div uib-dropdown>
+            <button uib-dropdown-toggle
+                    class="button"
+                    type="button">
+                My drodown comes from a html template!
+            </button>
+            <div class="bottom left" uib-dropdown-menu template-url="dropdown.html"></div>
+        </div>
+    </div>
+</div>
+
+<script type="text/ng-template" id="dropdown.html">
+    <div uib-dropdown-menu class="top left">
+        <img class="thumbnail" src="https://placehold.it/350x150" alt="Photo of Uranus.">
+    </div>
+</script>

@@ -1,0 +1,18 @@
+.uib-datepicker-popup.dropdown-pane {
+	visibility: visible;
+	width: auto;
+
+	padding: 5px;
+
+	table {
+		margin-bottom: 0;
+	}
+	.uib-button-bar {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.uib-button-bar button,
+	.uib-button-bar .button {
+		margin-bottom: 0;
+	}
+}

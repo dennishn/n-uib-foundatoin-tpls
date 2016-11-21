@@ -1,0 +1,48 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Timepicker</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <div uib-timepicker
+             ng-model="timepickerCtrl.mytime"
+             ng-change="timepickerCtrl.changed()"
+             hour-step="timepickerCtrl.hstep"
+             minute-step="timepickerCtrl.mstep"
+             show-meridian="timepickerCtrl.ismeridian">
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <pre>Time is: {{timepickerCtrl.mytime | date:'shortTime' }}</pre>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 medium-6 columns">
+        <label>
+            Hours step is:
+            <select class="form-control"
+                    ng-model="timepickerCtrl.hstep"
+                    ng-options="opt for opt in timepickerCtrl.options.hstep">
+            </select>
+        </label>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>
+            Minutes step is:
+            <select class="form-control"
+                    ng-model="timepickerCtrl.mstep"
+                    ng-options="opt for opt in timepickerCtrl.options.mstep">
+            </select>
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <button type="button" class="button" ng-click="timepickerCtrl.toggleMode()">12H / 24H</button>
+        <button type="button" class="button" ng-click="timepickerCtrl.update()">Set to 14:00</button>
+        <button type="button" class="button alert" ng-click="timepickerCtrl.clear()">Clear</button>
+    </div>
+</div>

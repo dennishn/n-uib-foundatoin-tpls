@@ -16,11 +16,7 @@
 		/*jshint validthis: true */
 		var vm = this;
 
-		activate();
-
-		function activate() {
-
-		}
+		vm.directiveDropdownOpen = false;
 	}
 
 })();

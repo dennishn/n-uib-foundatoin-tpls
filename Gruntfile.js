@@ -117,6 +117,10 @@ module.exports = function (grunt) {
 			},
 			gruntfile: {
 				files: ['Gruntfile.js']
+			},
+			uib: {
+				files: ['<%= yeoman.app %>/common/n-uib-foundation-tpls/**/*.html'],
+				tasks: ['ngtemplates:uib']
 			}
 		},
 
@@ -227,7 +231,7 @@ module.exports = function (grunt) {
 					module: 'gn-test',
 					htmlmin: {
 						collapseBooleanAttributes: false,
-						collapseWhitespace: false,
+						collapseWhitespace: true,
 						removeAttributeQuotes: false,
 						removeComments: false, // Only if you don't use comment directives!
 						removeEmptyAttributes: false,

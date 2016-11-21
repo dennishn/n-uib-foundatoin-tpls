@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Datepicker Popup</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 medium-6 columns">
+        <div class="input-group">
+            <input type="text"
+                   class="input-group-field"
+                   uib-datepicker-popup="{{datepickerPopupCtrl.format}}"
+                   ng-model="datepickerPopupCtrl.dt"
+                   is-open="datepickerPopupCtrl.popup1.opened"
+                   datepicker-options="datepickerPopupCtrl.dateOptions"
+                   ng-required="true"
+                   close-text="Close"
+                   alt-input-formats="datepickerPopupCtrl.altInputFormats" />
+            <div class="input-group-button">
+                <button class="button" ng-click="datepickerPopupCtrl.open1()">
+                    <i class="material-icons">date_range</i>
+                </button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="small-12 medium-6 columns">
+        <div class="input-group">
+            <input type="text"
+                   class="input-group-field"
+                   uib-datepicker-popup
+                   ng-model="datepickerPopupCtrl.dt"
+                   is-open="datepickerPopupCtrl.popup2.opened"
+                   datepicker-options="datepickerPopupCtrl.dateOptions"
+                   ng-required="true"
+                   close-text="Close"/>
+            <div class="input-group-button">
+                <button class="button" ng-click="datepickerPopupCtrl.open2()">
+                    <i class="material-icons">date_range</i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <pre>Selected date is: <em>{{datepickerPopupCtrl.dt | date:'fullDate' }}</em></pre>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="small-12 columns">
+        <label>
+            Format: <span class="muted-text">(manual alternate <em>{{datepickerPopupCtrl.altInputFormats[0]}}</em>)</span>
+            <select ng-model="datepickerPopupCtrl.format"
+                    ng-options="f for f in datepickerPopupCtrl.formats">
+                <option></option>
+            </select>
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <button type="button" class="button" ng-click="datepickerPopupCtrl.today()">Today</button>
+        <button type="button" class="button secondary" ng-click="datepickerPopupCtrl.setDate(2009, 7, 24)">2009-08-24</button>
+        <button type="button" class="button alert" ng-click="datepickerPopupCtrl.clear()">Clear</button>
+        <button type="button" class="button" ng-click="datepickerPopupCtrl.toggleMin()" uib-tooltip="After today restriction">Min date</button>
+    </div>
+</div>

@@ -1,0 +1,112 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Popover</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">
+            Dynamic
+        </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>
+            Popup Text:
+            <input type="text" ng-model="popoverCtrl.dynamicPopover.content">
+        </label>
+        <label>
+            Popup Title:
+            <input type="text" ng-model="popoverCtrl.dynamicPopover.title">
+        </label>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>&nbsp;</label>
+        <button uib-popover="{{popoverCtrl.dynamicPopover.content}}"
+                popover-title="{{popoverCtrl.dynamicPopover.title}}"
+                type="button"
+                class="button">
+            Dynamic Popover
+        </button>
+        <label>&nbsp;</label>
+        <button uib-popover-template="'myPopoverTemplate.html'"
+                popover-title="{{popoverCtrl.dynamicPopover.title}}"
+                type="button"
+                class="button">
+            Popover With Template
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">
+            Positional
+        </p>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>Popover placement
+            <select ng-model="popoverCtrl.placement.selected"
+                    ng-options="o as o for o in popoverCtrl.placement.options">
+            </select>
+        </label>
+    </div>
+    <div class="small-12 medium-6 columns">
+        <label>&nbsp;</label>
+        <button popover-placement="{{popoverCtrl.placement.selected}}"
+                uib-popover="On the {{popoverCtrl.placement.selected}}"
+                type="button"
+                class="button">
+            Popover {{popoverCtrl.placement.selected}}
+        </button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Triggers</p>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover="I appeared on mouse enter!" popover-trigger="'mouseenter'" type="button" class="button">Mouseenter</button>
+    </div>
+    <div class="small-12 columns">
+        <input type="text" value="Click me!" uib-popover="I appeared on focus! Click away and I'll vanish..."  popover-trigger="'focus'">
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Other</p>
+    </div>
+    <div class="small-12 columns">
+        <button popover-animation="false" uib-popover="I have a title!" popover-title="The title." type="button" class="button" popover-placement="right">title</button>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover="I am activated manually" popover-is-open="popoverCtrl.popoverIsOpen" ng-click="popoverCtrl.popoverIsOpen = !popoverCtrl.popoverIsOpen" type="button" class="button" popover-placement="right">Toggle popover</button>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover-html="popoverCtrl.htmlPopover" class="button" popover-placement="right">HTML Popover</button>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover-html="'<b>HTML</b>, <i>inline</i>'" class="button" popover-placement="right">HTML Popover (inline)</button>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover="I am appended to the body" type="button" class="button" popover-append-to-body="true" popover-placement="right">Append to body</button>
+    </div>
+    <div class="small-12 columns">
+        <button uib-popover="I am delayed on entry and exit oh my" type="button" class="button" popover-popup-close-delay="1000" popover-popup-delay="1000" popover-placement="right">Delayed</button>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="myPopoverTemplate.html">
+    <div>{{popoverCtrl.dynamicPopover.content}}</div>
+    <label>
+        Popup Title:
+        <input type="text" ng-model="popoverCtrl.dynamicPopover.title">
+    </label>
+</script>
+
+
+
+

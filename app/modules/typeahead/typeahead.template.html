@@ -1,0 +1,181 @@
+<style>
+    .typeahead-demo .custom-popup-wrapper {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
+        display: none;
+        background-color: #f9f9f9;
+    }
+    
+    .typeahead-demo .custom-popup-wrapper > .message {
+        padding: 10px 20px;
+        border-bottom: 1px solid #ddd;
+        color: #868686;
+    }
+    
+    .typeahead-demo .custom-popup-wrapper > .dropdown-menu {
+        position: static;
+        float: none;
+        display: block;
+        min-width: 160px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+        box-shadow: none;
+    }
+</style>
+
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Typeahead</h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Static Arrays</p>
+    </div>
+    <div class="small-12 columns">
+        <label>
+            American States
+            <input type="text"
+                   ng-model="typeaheadCtrl.selected"
+                   uib-typeahead="state for state in typeaheadCtrl.states | filter:$viewValue | limitTo:8">
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.selected | json}}</pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Full Width</p>
+    </div>
+    <div class="small-12 columns">
+        <div class="callout primary small">
+            <p>This is an addition to UI Bootstrap, as we think a full-width suggestion list looks a lot nicer</p>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <div class="uib-typeahead-wrapper">
+            <label>
+                American States
+                <input type="text"
+                       ng-model="typeaheadCtrl.selected"
+                       uib-typeahead="state for state in typeaheadCtrl.states | filter:$viewValue | limitTo:8">
+            </label>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.selected | json}}</pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Asynchronous Results</p>
+    </div>
+    <div class="small-12 columns">
+        <label>
+            <pre>maps.googleapis.com/maps/api/geocode/json</pre>
+            <input type="text"
+                   ng-model="typeaheadCtrl.asyncSelected"
+                   placeholder="Locations loaded via $http"
+                   uib-typeahead="address for address in typeaheadCtrl.getLocation($viewValue)"
+                   typeahead-loading="typeaheadCtrl.loadingLocations"
+                   typeahead-no-results="typeaheadCtrl.noResults">
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <p><pre>is-loading: {{typeaheadCtrl.loadingLocations}}</pre></p>
+    </div>
+    <div class="small-12 columns" ng-show="typeaheadCtrl.noResults">
+        <p><pre>no-results: {{typeaheadCtrl.noResults}}</pre></p>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.asyncSelected | json}}</pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">ngModelOptions support</p>
+    </div>
+    <div class="small-12 columns">
+        <label>
+            American States
+            <input type="text"
+                   ng-model="typeaheadCtrl.ngModelOptionsSelected"
+                   ng-model-options="typeaheadCtrl.modelOptions"
+                   uib-typeahead="state for state in typeaheadCtrl.states | filter:$viewValue | limitTo:8">
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.ngModelOptionsSelected | json}}</pre>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Custom templates for results</p>
+    </div>
+    <div class="small-12 columns">
+        <label>
+            American States
+            <input type="text"
+                   ng-model="typeaheadCtrl.customSelected"
+                   placeholder="Custom template"
+                   uib-typeahead="state as state.name for state in typeaheadCtrl.statesWithFlags | filter:{name:$viewValue}"
+                   typeahead-template-url="customTemplate.html"
+                   typeahead-show-hint="true"
+                   typeahead-min-length="0">
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.customSelected | json}}</pre>
+    </div>
+</div>
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">Custom popup templates for typeahead's dropdown</p>
+    </div>
+    <div class="small-12 columns">
+        <label>
+            American States
+            <input type="text"
+                   ng-model="typeaheadCtrl.customPopupSelected"
+                   placeholder="Custom popup template"
+                   uib-typeahead="state as state.name for state in typeaheadCtrl.statesWithFlags | filter:{name:$viewValue}"
+                   typeahead-popup-template-url="customPopupTemplate.html">
+        </label>
+    </div>
+    <div class="small-12 columns">
+        <pre>Model: {{typeaheadCtrl.customPopupSelected | json}}</pre>
+    </div>
+</div>
+
+<script type="text/ng-template" id="customTemplate.html">
+    <a>
+        <img ng-src="http://upload.wikimedia.org/wikipedia/commons/thumb/{{match.model.flag}}" width="16">
+        <span ng-bind-html="match.label | uibTypeaheadHighlight:query"></span>
+    </a>
+</script>
+
+<script type="text/ng-template" id="customPopupTemplate.html">
+    <div class="custom-popup-wrapper"
+         ng-style="{top: position().top+'px', left: position().left+'px'}"
+         style="display: block;"
+         ng-show="isOpen() && !moveInProgress"
+         aria-hidden="{{!isOpen()}}">
+        <p class="message">select location from drop down.</p>
+        
+        <ul class="dropdown-menu" role="listbox">
+            <li class="uib-typeahead-match" ng-repeat="match in matches track by $index" ng-class="{active: isActive($index) }"
+                ng-mouseenter="selectActive($index)" ng-click="selectMatch($index)" role="option" id="{{::match.id}}">
+                <div uib-typeahead-match index="$index" match="match" query="query" template-url="templateUrl"></div>
+            </li>
+        </ul>
+    </div>
+</script>
