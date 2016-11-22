@@ -16,56 +16,37 @@
     
         <form novalidate name="nformfield.form">
             
-            <n-form-field ng-model="nformfield.fooModel"
-                          is-error="(nformfield.form.foo.$invalid && !nformfield.form.foo.$error.asyncEmail) || false"
-                          is-warning="(nformfield.form.foo.$invalid && nformfield.form.foo.$error.nStackEmail && !nformfield.form.foo.$pending) || false"
-                          is-success="(nformfield.form.foo.$valid && !nformfield.form.foo.$pending) || false"
-                          is-loading="nformfield.form.foo.$pending">
-                <label for="foo">
-                    Label Text
-                    <input name="foo"
-                           id="foo"
-                           type="email"
-                           n-email-nstack-validator
-                           n-email
-                           ng-model="nformfield.fooModel"
-                           required
-                           minlength="3"
-                           maxlength="15">
-    
-                    <span class="form-error"
-                          ng-messages="nformfield.form.foo.$error"
-                          ng-messages-multiple
-                          role="alert">
-                    
-                        <span ng-message="required">required</span>
-                        <span ng-message="minlength">minlength</span>
-                        <span ng-message="maxlength">maxlength</span>
-                        <span ng-message="email">email</span>
-                        
-                    </span>
-                    
-                    <span class="form-success">
-                        This is a success message
-                    </span>
-    
-                    <span class="form-warning">
-                        <span>?! {{nformfield.form.foo.nStackEmailMessage}}</span>
-                    </span>
+<n-form-field is-error="(nformfield.form.foo.$invalid && !nformfield.form.foo.$error.asyncEmail) || false"
+              is-warning="(nformfield.form.foo.$invalid && nformfield.form.foo.$error.nStackEmail && !nformfield.form.foo.$pending) || false"
+              is-success="(nformfield.form.foo.$valid && !nformfield.form.foo.$pending) || false"
+              is-loading="nformfield.form.foo.$pending">
+    <label for="foo">
+        Label Text
+        <input name="foo"
+               id="foo"
+               type="email"
+               n-email-nstack-validator
+               n-email
+               ng-model="nformfield.fooModel"
+               required
+               minlength="3"
+               maxlength="15">
+        <span class="form-error"
+              ng-messages="nformfield.form.foo.$error"
+              ng-messages-multiple
+              role="alert">
+            <span ng-message="required">required</span>
+            <span ng-message="minlength">minlength</span>
+            <span ng-message="maxlength">maxlength</span>
+            <span ng-message="email">email</span>
+        </span>
+        <span class="form-success">This is a success message</span>
+        <span class="form-warning">{{nformfield.form.foo.nStackEmailMessage}}</span>
+        <span class="form-loading">Please wait...</span>
+    </label>
+</n-form-field>
 
-                    <span class="form-loading">
-                        Please wait...
-                    </span>
-                    
-                </label>
-                
-            </n-form-field>
-
-            <n-form-field ng-model="nformfield.barModel"
-                          is-error="(nformfield.form.bar.$invalid && !nformfield.form.bar.$error.asyncEmail) || false"
-                          is-warning="(nformfield.form.bar.$invalid && nformfield.form.bar.$error.nStackEmail && !nformfield.form.bar.$pending) || false"
-                          is-success="(nformfield.form.bar.$valid && nformfield.form.bar.$touched && !nformfield.form.bar.$pending) || false"
-                          is-loading="nFormfield.form.bar.$pending || false">
+            <n-form-field>
                 <label for="bar">
                     Label Text
                     <input name="bar"
