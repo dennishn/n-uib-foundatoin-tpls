@@ -1,7 +1,7 @@
 <div class="top-bar docs-topbar">
     <div class="top-bar-title">
         <a ui-sref="application.index">
-            <strong>n-uib-foundation-tpls</strong>
+            <strong>Nodes Angular UI</strong>
         </a>
     </div>
     <div class="top-bar-right">
@@ -12,7 +12,7 @@
                 ng-mouseover="application.directiveDropdownOpen = true;"
                 ng-mouseleave="application.directiveDropdownOpen = false;">
                 <a href="">
-                    Directives +
+                    n-uib-foundation +
                 </a>
                 <ul class="menu vertical bottom right" uib-dropdown-menu>
                     <li ui-sref-active="active">
@@ -65,6 +65,21 @@
                     </li>
                     <li ui-sref-active="active">
                         <a ui-sref="application.typeahead">Typeahead</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    
+        <ul class="menu">
+            <li uib-dropdown is-open="application.nComponentsDropdown"
+                ng-mouseover="application.nComponentsDropdown = true;"
+                ng-mouseleave="application.nComponentsDropdown = false;">
+                <a href="">
+                    n Components +
+                </a>
+                <ul class="menu vertical bottom right" uib-dropdown-menu>
+                    <li ui-sref-active="active">
+                        <a ui-sref="application.nformfield">nFormField</a>
                     </li>
                 </ul>
             </li>

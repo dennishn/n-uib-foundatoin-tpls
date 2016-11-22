@@ -17,6 +17,7 @@
 			'angular-loading-bar',
 			'angulartics',
 			'angulartics.google.analytics',
+			'ngMessages',
 			'ngAnimate',
 			'ngSanitize',
 			'ngTouch',
@@ -41,6 +42,9 @@
 			'rating',
 			'timepicker',
 			'typeahead',
+			'nFormFieldModule',
+			'nFormField',
+			'nEmailAsyncValidator',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

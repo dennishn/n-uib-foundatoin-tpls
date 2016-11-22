@@ -96,7 +96,11 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@import "../common/n-uib-foundation-tpls/n-uib-foundation-tpls";
+@import "../../bower_components/n-uib-foundation-tpls/src/n-uib-foundation-tpls";
+@import "../common/nFormField/nFormField";
+@import "../common/nFoundationExtras/nFoundationExtras";
+
+//@import "../common/n-uib-foundation-tpls/n-uib-foundation-tpls.scss";
 
 // Base
 /* ---> Do not delete this comment (base) <--- */
@@ -140,4 +144,5 @@
 @import "../modules/rating/rating";
 @import "../modules/timepicker/timepicker";
 @import "../modules/typeahead/typeahead";
+@import "../modules/nFormField/nFormField";
 /* ---> Do not delete this comment (Modules) <--- */

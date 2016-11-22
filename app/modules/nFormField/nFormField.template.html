@@ -1,0 +1,66 @@
+<div class="row">
+    <div class="small-12 columns">
+        <label class="is-invalid-label">
+            Name
+            <!-- Add "is-invalid-input" -->
+            <input type="text" class="is-invalid-input" required aria-invalid aria-describedby="uuid">
+            <!-- Add "is-visible" -->
+            <span class="form-error is-visible" id="uuid">This field is required.</span>
+        </label>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+    
+    
+        <form novalidate name="nformfield.form">
+            
+            <n-form-field ng-model="nformfield.fooModel"
+                          is-error="nformfield.form.foo.$invalid && nformfield.form.foo.$dirty"
+                          is-warning="nformfield.form.foo.$invalid && nformfield.form.foo.$pristine"
+                          is-success="nformfield.form.foo.$valid && nformfield.form.foo.$dirty">
+                <label for="foo">
+                    Label Text
+                    <input name="foo"
+                           id="foo"
+                           type="email"
+                           n-email-async-validator
+                           ng-model="nformfield.fooModel"
+                           required
+                           minlength="3"
+                           maxlength="15">
+    
+                    <span class="form-error"
+                          ng-if="nformfield.form.foo.$invalid && nformfield.form.foo.$dirty"
+                          ng-messages="nformfield.form.foo.$error"
+                          ng-messages-multiple
+                          role="alert">
+                    
+                        <span ng-message="required">required</span>
+                        <span ng-message="minlength">minlength</span>
+                        <span ng-message="maxlength">maxlength</span>
+                        <span ng-message="email">email</span>
+                        
+                    </span>
+                    
+                    <span class="form-success">
+                        This is a success message
+                    </span>
+    
+                    <span class="form-warning">
+                        This is a warning message
+                    </span>
+                    
+                </label>
+                
+            </n-form-field>
+            
+        </form>
+        
+        
+    </div>
+</div>
+<pre>
+{{nformfield.form.foo | json}}
+</pre>

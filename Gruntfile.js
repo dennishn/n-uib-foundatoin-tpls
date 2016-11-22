@@ -33,7 +33,9 @@ var bowerIgnore = [
 	'angulartics-newrelic-insights',
 	'foundation.js',
 	'waypoints',
-	'sha1'
+	'sha1',
+	'angular-bootstrap',
+	'what-input'
 ];
 // Since we are writing a new environment file, we remove it from the usemin processing
 var envFile = 'config/environment.js';
@@ -117,10 +119,6 @@ module.exports = function (grunt) {
 			},
 			gruntfile: {
 				files: ['Gruntfile.js']
-			},
-			uib: {
-				files: ['<%= yeoman.app %>/common/n-uib-foundation-tpls/**/*.html'],
-				tasks: ['ngtemplates:uib']
 			}
 		},
 

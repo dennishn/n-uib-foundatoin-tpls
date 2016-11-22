@@ -11,8 +11,8 @@
 			.module('APPLICATION_SETTINGS', [])
 			.constant('APPLICATION_SETTINGS', {
 				nStack: {
-					appId: '',
-					apiKey: ''
+					appId: 'BmZHmoKuU99A5ZnOByOiRxMVSmAWC2yBz3OW',
+					apiKey: 'yw9go00oCWt6zPhfbdjRYXiHRWmkQZQSuRke'
 				}
 			});
 

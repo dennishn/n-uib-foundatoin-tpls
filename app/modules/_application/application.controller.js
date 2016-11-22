@@ -12,11 +12,14 @@
 		.controller('Application', Application);
 
 	/* @ngInject */
-	function Application() {
+	function Application(NEmailAsyncValidator) {
 		/*jshint validthis: true */
 		var vm = this;
 
 		vm.directiveDropdownOpen = false;
+		
+		NEmailAsyncValidator.validate('horse@gnail.com');
+		
 	}
 
 })();

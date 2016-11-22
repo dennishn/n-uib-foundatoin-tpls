@@ -1,0 +1,10 @@
+n-form-field,
+[n-form-field] {
+	display: block;
+
+	.form-error {
+		> * {
+			display: block;
+		}
+	}
+}

@@ -12,7 +12,8 @@
     "angulartics": "~1.0.0",
     "angulartics-google-analytics": "~0.1.4",
     "angular-bootstrap": "^2.2.0",
-    "foundation-sites": "^6.2.4"
+    "foundation-sites": "^6.2.4",
+    "angular-messages": "^1.5.8"
   },
   "appPath": "app/",
   "resolutions": {
