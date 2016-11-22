@@ -29,3 +29,19 @@
 		display: block;
 	}
 }
+
+.is-loading-input {
+	@include form-input-error($background: $dark-gray);
+}
+.is-loading-label {
+	color: $dark-gray;
+}
+.form-loading {
+	@include form-error;
+
+	color: $dark-gray;
+
+	&.is-visible {
+		display: block;
+	}
+}

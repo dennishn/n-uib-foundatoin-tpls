@@ -9,7 +9,7 @@
 	 */
 	var core = angular.module('config', [
 		'DEBUG_ENV',
-		'nEmailAsyncValidator',
+		'nEmailNStackValidator',
 		'APPLICATION_SETTINGS',
 		'angular-loading-bar',
 		'cgBusy'
@@ -26,7 +26,7 @@
 	/* @ngInject */
 	function configure(DEBUG_ENV,
 					   APPLICATION_SETTINGS,
-					   NEmailAsyncValidatorProvider,
+					   nEmailNStackValidatorProvider,
 					   $logProvider,
 					   $stateProvider,
 					   $urlRouterProvider,
@@ -39,8 +39,8 @@
 		} else {
 			$logProvider.debugEnabled(false);
 		}
-		
-		NEmailAsyncValidatorProvider.configure(APPLICATION_SETTINGS.nStack);
+
+		nEmailNStackValidatorProvider.configure(APPLICATION_SETTINGS.nStack);
 		
 		cfpLoadingBarProvider.includeSpinner = false;
 		cfpLoadingBarProvider.latencyThreshold = 100;

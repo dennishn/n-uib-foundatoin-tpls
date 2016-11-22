@@ -8,10 +8,10 @@
 	 *
 	 */
 	angular
-		.module('nEmailAsyncValidator')
-		.provider('NEmailAsyncValidator', NEmailAsyncValidator);
+		.module('nEmailNStackValidator')
+		.provider('nEmailNStackValidator', nEmailNStackValidator);
 	
-	function NEmailAsyncValidator() {
+	function nEmailNStackValidator() {
 
 		// Private variables
 
@@ -39,7 +39,7 @@
 			function validate(email) {
 				
 				if(settings.appId.length < 1 || settings.apiKey.length < 1) {
-					throw new $exceptionHandler('missing appId or apiKey', 'Use the NEmailAsyncValidtorProvider to configure this during config phase.');
+					throw new $exceptionHandler('missing appId or apiKey', 'Use the nEmailNStackValidatorProvider to configure this during config phase.');
 				}
 				
 				var deferred = $q.defer();
@@ -52,12 +52,10 @@
 				
 				$http.get(url, {headers: headers, params: {email: email}})
 					.then(function validateEmailSuccess(response) {
-						// deferred.resolve(response.data.data);
-						deferred.resolve(true);
+						deferred.resolve(response.data.data);
 					})
 					.catch(function validateEmailError(error) {
-						// deferred.reject(error);
-						deferred.reject(false);
+						deferred.reject(error.data.message);
 					});
 				
 				return deferred.promise;

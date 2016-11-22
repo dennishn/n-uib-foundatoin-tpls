@@ -2,8 +2,8 @@
 	'use strict';
 
 	/**
-	 * @name
-	 * @author
+	 * @name nFormField
+	 * @author Dennis Haulund Nielsen <dhni@nodes.dk>
 	 * @description
 	 *
 	 */
@@ -14,10 +14,8 @@
 			bindings: {
 				isSuccess: '<',
 				isWarning: '<',
-				isError: '<'
-			},
-			require: {
-				form: '^form'
+				isError: '<',
+				isLoading: '<'
 			}
 		});
 
@@ -41,6 +39,11 @@
 				'label': 'is-success-label',
 				'input': 'is-success-input',
 				'text': 'is-visible'
+			},
+			loading: {
+				'label': 'is-loading-label',
+				'input': 'is-loading-input',
+				'text': 'is-visible'
 			}
 		};
 		
@@ -54,7 +57,6 @@
 		
 		vm.$onInit = function() {
 			$scope.$watch(function() {
-				// return vm.form[inputName] && vm.form[inputName].$invalid;
 				return vm.isError;
 			}, onValidityChanged);
 			
@@ -65,14 +67,17 @@
 			$scope.$watch(function() {
 				return vm.isWarning;
 			}, onWarningChanged);
+
+			$scope.$watch(function() {
+				return vm.isLoading;
+			}, onLoadingChanged);
 		};
 		
 		function onValidityChanged(newVal) {
-			// _clearClasses();
-			console.warn(newVal, vm.isError);
-			
+			if(!newVal) {
+				newVal = false;
+			}
 			var $errorTxt = $element.find('.form-error');
-			console.info($errorTxt)
 			
 			$label.toggleClass(CLASSES.error['label'], newVal);
 			$input.toggleClass(CLASSES.error['input'], newVal);
@@ -80,8 +85,9 @@
 		}
 		
 		function onSuccessChanged(newVal) {
-			// _clearClasses();
-			
+			if(!newVal) {
+				newVal = false;
+			}
 			var $successTxt = $element.find('.form-success');
 			
 			$label.toggleClass(CLASSES.success['label'], newVal);
@@ -90,24 +96,26 @@
 		}
 		
 		function onWarningChanged(newVal) {
-			
+			if(!newVal) {
+				newVal = false;
+			}
 			var $warningTxt = $element.find('.form-warning');
 			
 			$label.toggleClass(CLASSES.warning['label'], newVal);
 			$input.toggleClass(CLASSES.warning['input'], newVal);
 			$warningTxt.toggleClass(CLASSES.warning['text'], newVal);
 		}
-		
-		function _clearClasses() {
-			for(var key in CLASSES) {
-				if(CLASSES.hasOwnProperty(key)) {
-					$label.removeClass(CLASSES[key]['label']);
-					$input.removeClass(CLASSES[key]['input']);
-					$errorTxt.removeClass(CLASSES[key]['text']);
-				}
+
+		function onLoadingChanged(newVal) {
+			if(!newVal) {
+				newVal = false;
 			}
+			var $warningTxt = $element.find('.form-loading');
+
+			$label.toggleClass(CLASSES.loading['label'], newVal);
+			$input.toggleClass(CLASSES.loading['input'], newVal);
+			$warningTxt.toggleClass(CLASSES.loading['text'], newVal);
 		}
-		
 		
 	};
 

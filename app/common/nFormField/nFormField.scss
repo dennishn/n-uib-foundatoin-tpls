@@ -2,6 +2,7 @@ n-form-field,
 [n-form-field] {
 	display: block;
 
+	// Support multiple ngMessages
 	.form-error {
 		> * {
 			display: block;

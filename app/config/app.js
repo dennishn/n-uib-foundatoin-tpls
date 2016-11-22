@@ -44,7 +44,8 @@
 			'typeahead',
 			'nFormFieldModule',
 			'nFormField',
-			'nEmailAsyncValidator',
+			'nEmailNStackValidator',
+			'nEmail',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();
