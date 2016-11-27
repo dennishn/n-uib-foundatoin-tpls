@@ -4,6 +4,8 @@ $nFoundation-palette: (
 
 $global-weight-light: 300;
 
+$system-font-families: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
 $info-color: map_get($nFoundation-palette, info);
 
 $list-group-margin: 0 0 $global-margin;

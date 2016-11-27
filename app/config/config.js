@@ -35,10 +35,8 @@
 					   cfpLoadingBarProvider,
 					   $touchProvider,
 					   $httpProvider) {
-		
-		console.warn($touchProvider.ngClickOverrideEnabled())
-		$touchProvider.ngClickOverrideEnabled(true)
-		console.warn($touchProvider.ngClickOverrideEnabled())
+
+		$touchProvider.ngClickOverrideEnabled(true);
 
 		if($logProvider.debugEnabled && DEBUG_ENV) {
 			$logProvider.debugEnabled(true);

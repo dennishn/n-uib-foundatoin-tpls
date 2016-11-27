@@ -1,4 +1,10 @@
+body {
+	font-family: $system-font-families;
+}
+
 @include headings() {
+	font-family: $system-font-families;
+
 	&.text-weight-light {
 		font-weight: $global-weight-light;
 	}

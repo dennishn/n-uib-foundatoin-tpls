@@ -5,120 +5,132 @@
         </a>
     </div>
     <div class="top-bar-right">
-        
-        <ul class="menu">
-            <li uib-dropdown
-                is-open="application.directiveDropdownOpen"
-                ng-mouseover="application.directiveDropdownOpen = true;"
-                ng-mouseleave="application.directiveDropdownOpen = false;">
-                <a href="">
-                    n-uib-foundation +
-                </a>
-                <ul class="menu vertical bottom right" uib-dropdown-menu>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.accordion">Accordion</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.alert">Alert</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.buttons">Buttons</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.collapse">Collapse</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.datepicker">Datepicker</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.datepicker-popup">Datepicker Popup</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.dropdown">Dropdown</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.modal">Modal</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.pager">Pager</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.pagination">Pagination</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.popover">Popover</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.progressbar">Progressbar</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.rating">Rating</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.tabs">Tabs</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.timepicker">Timepicker</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.tooltip">Tooltip</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.typeahead">Typeahead</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    
-        <ul class="menu">
-            <li uib-dropdown is-open="application.nComponentsDropdown"
-                ng-mouseover="application.nComponentsDropdown = true;"
-                ng-mouseleave="application.nComponentsDropdown = false;">
-                <a href="">
-                    n Components +
-                </a>
-                <ul class="menu vertical bottom right" uib-dropdown-menu>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nformfield">nFormField</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nemail">nEmail</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nemailnstackvalidator">nEmailNstackValidator</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nfoundationextras">nFoundationExtras</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nfoundationswitch">nFoundationSwitch</a>
-                    </li>
-                    <li ui-sref-active="active">
-                        <a ui-sref="application.nrangeinput">nRangeInput</a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-        
-        <ul class="menu">
-            <li uib-dropdown is-open="application.experimentsDropdownOpen"
-                ng-mouseover="application.experimentsDropdownOpen = true;"
-                ng-mouseleave="application.experimentsDropdownOpen = false;">
-                <a href="">
-                    Experiments +
-                </a>
-                <ul class="menu vertical bottom right" uib-dropdown-menu>
-                    <li>
-                        <a href="">
-                            <em>
-                                Coming Soon...
-                            </em>
-                        </a>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-    
+        <n-foundation-dropdown-menu>
+            <ul class="dropdown menu">
+                <li>
+                    <a href="">
+                        n-uib-foundation
+                    </a>
+                    <ul class="menu">
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.accordion">Accordion</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.alert">Alert</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.buttons">Buttons</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.collapse">Collapse</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.datepicker">Datepicker</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.datepicker-popup">Datepicker Popup</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.dropdown">Dropdown</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.modal">Modal</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.pager">Pager</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.pagination">Pagination</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.popover">Popover</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.progressbar">Progressbar</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.rating">Rating</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.tabs">Tabs</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.timepicker">Timepicker</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.tooltip">Tooltip</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.typeahead">Typeahead</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </n-foundation-dropdown-menu>
+
+        <n-foundation-dropdown-menu>
+            <ul class="dropdown menu">
+                <li>
+                    <a href="">
+                        nComponents
+                    </a>
+                    <ul class="menu">
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nformfield">nFormField</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nemail">nEmail</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nemailnstackvalidator">nEmailNstackValidator</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationextras">nFoundationExtras</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationswitch">nFoundationSwitch</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nrangeinput">nRangeInput</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationdropdownmenu">nFoundationDropdownMenu</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationdrilldownmenu">nFoundationDrilldownMenu</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationaccordionmenu">nFoundationAccordionMenu</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationresponsivenavigation">nFoundationResponsiveNavigation</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.nfoundationmagellan">nFoundationMagellan</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </n-foundation-dropdown-menu>
+
+        <n-foundation-dropdown-menu>
+            <ul class="dropdown menu">
+                <li>
+                    <a href="">
+                        Experiments
+                    </a>
+                    <ul class="menu">
+                        <li>
+                            <a href="">
+                                <em>
+                                    Coming Soon...
+                                </em>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </n-foundation-dropdown-menu>
     </div>
     
 </div>

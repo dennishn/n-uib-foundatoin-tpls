@@ -123,6 +123,10 @@
 
 // Components
 @import "../common/n-foundation-switch/n-foundation-switch";
+@import "../common/n-foundation-dropdown-menu/n-foundation-dropdown-menu";
+@import "../common/n-foundation-drilldown-menu/n-foundation-drilldown-menu";
+@import "../common/n-foundation-accordion-menu/n-foundation-accordion-menu";
+@import "../common/n-foundation-responsive-navigation/n-foundation-responsive-menu";
 /* ---> Do not delete this comment (Components) <--- */
 
 // Modules
@@ -151,4 +155,10 @@
 @import "../modules/nFoundationExtras/nFoundationExtras";
 @import "../modules/nFoundationSwitch/nFoundationSwitch";
 @import "../modules/nRangeInput/nRangeInput";
+@import "../modules/nFoundationDropdownMenu/nFoundationDropdownMenu";
+@import "../modules/nFoundationDrilldownMenu/nFoundationDrilldownMenu";
+@import "../modules/nFoundationAccordionMenu/nFoundationAccordionMenu";
+@import "../modules/nFoundationResponsiveNavigation/nFoundationResponsiveNavigation";
+@import "../modules/nFoundationMagellan/nFoundationMagellan";
+@import "../modules\nFoundationAnimationExperiment\nFoundationAnimationExperiment";
 /* ---> Do not delete this comment (Modules) <--- */

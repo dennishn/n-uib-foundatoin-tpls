@@ -37,6 +37,43 @@
 					vm.dismiss({$value: 'cancel'});
 				};
 			}
+		})
+		.animation('.dhni-anim', function() {
+			return {
+				enter : function(element, done) {
+					console.log('enter');
+					done();
+					// element.css('opacity',0);
+					// jQuery(element).animate({
+					// 	opacity: 1
+					// }, done);
+                    //
+					// // optional onDone or onCancel callback
+					// // function to handle any post-animation
+					// // cleanup operations
+					// return function(isCancelled) {
+					// 	if(isCancelled) {
+					// 		jQuery(element).stop();
+					// 	}
+					// }
+				},
+				leave : function(element, done) {
+					console.log('leave');
+					done();
+					// jQuery(element).animate({
+					// 	opacity: 0
+					// }, done);
+                    //
+					// // optional onDone or onCancel callback
+					// // function to handle any post-animation
+					// // cleanup operations
+					// return function(isCancelled) {
+					// 	if(isCancelled) {
+					// 		jQuery(element).stop();
+					// 	}
+					// }
+				}
+			}
 		});
 
 	/* @ngInject */
@@ -46,7 +83,7 @@
 		
 		vm.items = ['item1', 'item2', 'item3'];
 		
-		vm.animationsEnabled = true;
+		vm.animationsEnabled = false;
 		
 		vm.open = function (size, parentSelector) {
 			var parentElem = parentSelector ?
@@ -57,6 +94,7 @@
 				ariaLabelledBy: 'modal-title',
 				ariaDescribedBy: 'modal-body',
 				templateUrl: 'myModalContent.html',
+				windowClass: 'dhni-anim',
 				controller: 'ModalInstanceCtrl',
 				controllerAs: 'vm',
 				size: size,
@@ -79,6 +117,7 @@
 			var modalInstance = $uibModal.open({
 				animation: vm.animationsEnabled,
 				component: 'modalComponent',
+				windowClass: 'dhni-anim',
 				resolve: {
 					items: function () {
 						return vm.items;
@@ -95,9 +134,11 @@
 		
 		vm.openLongModal = function () {
 			var modalInstance = $uibModal.open({
+				animation: vm.animationsEnabled,
 				templateUrl: 'truckloadModal.html',
 				controller: 'ModalInstanceCtrl',
 				controllerAs: 'vm',
+				windowClass: 'dhni-anim',
 				resolve: {
 					items: function () {
 						return vm.items;
@@ -112,6 +153,7 @@
 				ariaLabelledBy: 'modal-title-bottom',
 				ariaDescribedBy: 'modal-body-bottom',
 				templateUrl: 'stackedModal.html',
+				windowClass: 'dhni-anim',
 				size: 'sm',
 				controller: function($scope) {
 					$scope.name = 'bottom';
@@ -123,6 +165,7 @@
 				ariaLabelledBy: 'modal-title-top',
 				ariaDescribedBy: 'modal-body-top',
 				templateUrl: 'stackedModal.html',
+				windowClass: 'dhni-anim',
 				size: 'sm',
 				controller: function($scope) {
 					$scope.name = 'top';

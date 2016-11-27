@@ -1,8 +1,35 @@
 <div class="row">
     <div class="small-12 columns">
         <h3>n-range-input</h3>
+        <p>Not much to see here, just making sure styles are actually applied :-)</p>
     </div>
+</div>
+<form name="nrangeinput.form" novalidate>
+    <div class="row">
+        <div class="small-9 columns">
+            <n-form-field>
+                <label for="foo" n-form-field-label>
+                    Label Text
+                    <input name="foo"
+                           n-form-field-input
+                           id="foo"
+                           type="range"
+                           ng-model="nrangeinput.fooModel"
+                           min="3"
+                           step="10"
+                           max="300">
+                </label>
+            </n-form-field>
+        </div>
+        <div class="small-3 columns">
+            <pre>{{nrangeinput.fooModel}}</pre>
+        </div>
+    </div>
+</form>
+<div class="row">
     <div class="small-12 columns">
-        <input type="range">
+<pre>
+$error: {{nrangeinput.form.$error | json: 4}}
+</pre>
     </div>
 </div>

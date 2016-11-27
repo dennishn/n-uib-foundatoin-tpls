@@ -52,6 +52,17 @@
 			'nFoundationSwitch',
 			'nFoundationSwitchModule',
 			'nRangeInputModule',
+			'nFoundationDropdownMenuModule',
+			'nFoundationDropdownMenu',
+			'nFoundationDrilldownMenuModule',
+			'nFoundationDrilldownMenu',
+			'nFoundationAccordionMenuModule',
+			'nFoundationAccordionMenu',
+			'nFoundationResponsiveNavigationModule',
+			'nFoundationResponsiveMenu',
+			'nFoundationMagellanModule',
+			'nFoundationMagellan',
+			'nFoundationAnimationExperiment',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

@@ -18,6 +18,10 @@
 		
 		vm.alerts = [
 			{
+				msg: 'info',
+				type: 'info'
+			},
+			{
 				msg: 'success',
 				type: 'success'
 			},
