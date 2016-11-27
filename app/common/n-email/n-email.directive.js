@@ -1,6 +1,6 @@
 (function() {
 	'use strict';
-
+	
 	/**
 	 * @name nEmail
 	 * @author Dennis Haulund Nielsen <dhni@nodes.dk>
@@ -13,6 +13,7 @@
 
 	/* @ngInject */
 	function NEmail() {
+		
 		var directive = {
 			link: link,
 			restrict: 'A',

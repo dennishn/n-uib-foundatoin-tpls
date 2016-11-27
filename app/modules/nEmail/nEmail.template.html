@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>nEmail</h3>
+        <p>Overwrites the browser-built-in email validation with one that better matches what our API's uses</p>
+    </div>
+</div>
+
+<form novalidate name="nemail.form">
+    <div class="row">
+        <div class="small-12 columns">
+            <n-form-field is-error="nemail.form.email.$invalid"
+                          is-success="nemail.form.email.$valid && !nemail.form.$pristine">
+                <label for="email" n-form-field-label>
+                    Label Text
+                    <input name="email"
+                           n-form-field-input
+                           n-email
+                           id="email"
+                           type="email"
+                           ng-model="nemail.email">
+                    <span class="form-error"
+                          ng-messages="nemail.form.email.$error"
+                          ng-messages-multiple
+                          role="alert">
+                        <span ng-message="email">email</span>
+                    </span>
+                    <span class="form-success">This is a success message</span>
+                    <span class="form-warning">This is a warning message</span>
+                    <span class="form-loading">Please wait...</span>
+                </label>
+            </n-form-field>
+        </div>
+        <div class="small-12 columns">
+<pre>
+$error: {{nemail.form.email.$error | json}}
+</pre>
+        </div>
+    </div>
+</form>

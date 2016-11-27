@@ -46,6 +46,12 @@
 			'nFormField',
 			'nEmailNStackValidator',
 			'nEmail',
+			'nEmailModule',
+			'nEmailNstackValidation',
+			'nFoundationExtras',
+			'nFoundationSwitch',
+			'nFoundationSwitchModule',
+			'nRangeInputModule',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

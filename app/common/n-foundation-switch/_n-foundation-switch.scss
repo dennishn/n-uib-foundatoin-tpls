@@ -1,0 +1,12 @@
+n-foundation-switch,
+[n-foundation-switch] {
+	display: inline-block;
+	outline: 0;
+	user-select: none;
+	margin-bottom: $switch-margin;
+
+	@include clearfix;
+	.switch {
+		margin-bottom: 0;
+	}
+}

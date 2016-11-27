@@ -1,95 +1,246 @@
 <div class="row">
     <div class="small-12 columns">
-        <label class="is-invalid-label">
-            Name
-            <!-- Add "is-invalid-input" -->
-            <input type="text" class="is-invalid-input" required aria-invalid aria-describedby="uuid">
-            <!-- Add "is-visible" -->
-            <span class="form-error is-visible" id="uuid">This field is required.</span>
-        </label>
+        <h3>nFormField</h3>
     </div>
 </div>
 
-<div class="row">
-    <div class="small-12 columns">
-    
-    
-        <form novalidate name="nformfield.form">
-            
-<n-form-field is-error="(nformfield.form.foo.$invalid && !nformfield.form.foo.$error.asyncEmail) || false"
-              is-warning="(nformfield.form.foo.$invalid && nformfield.form.foo.$error.nStackEmail && !nformfield.form.foo.$pending) || false"
-              is-success="(nformfield.form.foo.$valid && !nformfield.form.foo.$pending) || false"
-              is-loading="nformfield.form.foo.$pending">
-    <label for="foo">
-        Label Text
-        <input name="foo"
-               id="foo"
-               type="email"
-               n-email-nstack-validator
-               n-email
-               ng-model="nformfield.fooModel"
-               required
-               minlength="3"
-               maxlength="15">
-        <span class="form-error"
-              ng-messages="nformfield.form.foo.$error"
-              ng-messages-multiple
-              role="alert">
-            <span ng-message="required">required</span>
-            <span ng-message="minlength">minlength</span>
-            <span ng-message="maxlength">maxlength</span>
-            <span ng-message="email">email</span>
-        </span>
-        <span class="form-success">This is a success message</span>
-        <span class="form-warning">{{nformfield.form.foo.nStackEmailMessage}}</span>
-        <span class="form-loading">Please wait...</span>
-    </label>
-</n-form-field>
 
-            <n-form-field>
-                <label for="bar">
+<form novalidate name="nformfield.form">
+    <div class="row">
+        <div class="small-12 columns">
+            <p class="lead">Use it with ngForm validation properties</p>
+        </div>
+        <div class="small-12 columns">
+            <n-form-field is-error="nformfield.form.foo.$invalid"
+                          is-success="nformfield.form.foo.$valid">
+                <label for="foo" n-form-field-label>
                     Label Text
-                    <input name="bar"
-                           id="bar"
+                    <input name="foo"
+                           n-form-field-input
+                           id="foo"
                            type="email"
-                           n-email-nstack-validator
-                           n-email
-                           ng-model="nformfield.barModel">
-
+                           ng-model="nformfield.fooModel"
+                           required
+                           minlength="3"
+                           maxlength="10">
                     <span class="form-error"
-                          ng-messages="nformfield.form.bar.$error"
+                          ng-messages="nformfield.form.foo.$error"
                           ng-messages-multiple
                           role="alert">
-                    
                         <span ng-message="required">required</span>
                         <span ng-message="minlength">minlength</span>
                         <span ng-message="maxlength">maxlength</span>
                         <span ng-message="email">email</span>
-                        
                     </span>
-
-                    <span class="form-success">
-                        This is a success message
-                    </span>
-
-                    <span class="form-warning">
-                        <span>{{nformfield.form.bar.nStackEmailMessage}}</span>
-                    </span>
-
-                    <span class="form-loading">
-                        Please wait...
-                    </span>
-
+                    <span class="form-success">This is a success message</span>
+                    <span class="form-warning">This is a warning message</span>
+                    <span class="form-loading">Please wait...</span>
                 </label>
-
             </n-form-field>
+        </div>
+    </div>
+</form>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p class="lead">
+            States
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button class="button" ng-click="nformfield.onSetState()">None</button>
+            <button class="button alert" ng-click="nformfield.onSetState('isError')">isError</button>
+            <button class="button warning" ng-click="nformfield.onSetState('isWarning')">isWarning</button>
+            <button class="button success" ng-click="nformfield.onSetState('isSuccess')">isSuccess</button>
+            <button class="button secondary" ng-click="nformfield.onSetState('isLoading')">isLoading</button>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <div class="row">
+            <div class="small-12 medium-6 columns">
+                <n-form-field is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+                    <label for="textarea" n-form-field-label>
+                        Label Text
+                        <textarea name="textarea"
+                                  ng-disabled="nformfield.state.isLoading"
+                                  n-form-field-input
+                                  id="textarea"
+                                  cols="30"
+                                  rows="10"
+                                  ng-model="nformfield.textAreaModel">
+                        </textarea>
+                        
+                        <span class="form-error" role="alert">This is an error message</span>
+                        <span class="form-success">This is a success message</span>
+                        <span class="form-warning">This is a warning message</span>
+                        <span class="form-loading">Please wait...</span>
+                    </label>
+                </n-form-field>
+            </div>
             
-        </form>
+            <div class="small-12 medium-6 columns">
+                
+                <n-form-field is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+                    
+                    <label n-form-field-label>Choose one</label>
+                    
+                    <input n-form-field-input
+                           type="radio"
+                           name="radioGroup"
+                           ng-model="nformfield.radioModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           value="One"
+                           id="radioGroupOne">
+                    <label n-form-field-label for="radioGroupOne">One</label>
+                    
+                    <input n-form-field-input
+                           type="radio"
+                           name="radioGroup"
+                           ng-model="nformfield.radioModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           value="Two"
+                           id="radioGroupTwo">
+                    <label n-form-field-label for="radioGroupTwo">Two</label>
+                    
+                    <input n-form-field-input
+                           type="radio"
+                           name="radioGroup"
+                           ng-model="nformfield.radioModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           value="Three"
+                           id="radioGroupThree">
+                    <label n-form-field-label for="radioGroupThree">Three</label>
         
+                    <span class="form-error" role="alert">This is an error message</span>
+                    <span class="form-success">This is a success message</span>
+                    <span class="form-warning">This is a warning message</span>
+                    <span class="form-loading">Please wait...</span>
+                </n-form-field>
+    
+                <n-form-field is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+        
+                    <label n-form-field-label>Choose one</label>
+        
+                    <input n-form-field-input
+                           type="checkbox"
+                           name="checkboxGroup"
+                           ng-model="nformfield.checkboxModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           id="checkboxGroupOne">
+                    <label n-form-field-label for="checkboxGroupOne">One</label>
+        
+                    <input n-form-field-input
+                           type="checkbox"
+                           name="checkboxGroup"
+                           ng-model="nformfield.checkboxModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           id="checkboxGroupTwo">
+                    <label n-form-field-label for="checkboxGroupTwo">Two</label>
+        
+                    <input n-form-field-input
+                           type="checkbox"
+                           name="checkboxGroup"
+                           ng-model="nformfield.checkboxModel"
+                           ng-disabled="nformfield.state.isLoading"
+                           id="checkboxGroupThree">
+                    <label n-form-field-label for="checkboxGroupThree">Three</label>
+        
+                    <span class="form-error" role="alert">This is an error message</span>
+                    <span class="form-success">This is a success message</span>
+                    <span class="form-warning">This is a warning message</span>
+                    <span class="form-loading">Please wait...</span>
+                </n-form-field>
+    
+                <n-form-field is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+                    <label for="foo" n-form-field-label>
+                        Label Text
+                        <input name="foo"
+                               n-form-field-input
+                               id="bar"
+                               type="text"
+                               ng-disabled="nformfield.state.isLoading"
+                               ng-model="nformfield.barModel">
+                        <span class="form-error" role="alert">This is an error message</span>
+                        <span class="form-success">This is a success message</span>
+                        <span class="form-warning">This is a warning message</span>
+                        <span class="form-loading">Please wait...</span>
+                    </label>
+                </n-form-field>
+                
+                <n-form-field class="row"
+                              is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+                    
+                    <div class="small-3 columns">
+                        <label for="baz" class="middle text-right" n-form-field-label>Label Text</label>
+                    </div>
+                    <div class="small-9 columns">
+                    
+                        <input name="baz"
+                               n-form-field-input
+                               id="baz"
+                               type="text"
+                               ng-disabled="nformfield.state.isLoading"
+                               ng-model="nformfield.bazModel">
+                        <span class="form-error" role="alert">This is an error message</span>
+                        <span class="form-success">This is a success message</span>
+                        <span class="form-warning">This is a warning message</span>
+                        <span class="form-loading">Please wait...</span>
+                        
+                    </div>
+                </n-form-field>
+    
+                <n-form-field is-error="nformfield.state.isError"
+                              is-warning="nformfield.state.isWarning"
+                              is-success="nformfield.state.isSuccess"
+                              is-loading="nformfield.state.isLoading">
+        
+                    
+                        <label for="yox" n-form-field-label>Label Text</label>
+                    
+                        <div class="input-group">
+                            <span class="input-group-label">$</span>
+    
+                            <input class="input-group-field"
+                                   name="yox"
+                                   n-form-field-input
+                                   id="yox"
+                                   type="text"
+                                   ng-disabled="nformfield.state.isLoading"
+                                   ng-model="nformfield.yoxModel">
+                            
+                            <div class="input-group-button">
+                                <button class="button" ng-disabled="nformfield.state.isLoading">Submit</button>
+                            </div>
+                            
+                        </div>
+            
+                        
+                        <span class="form-error" role="alert">This is an error message</span>
+                        <span class="form-success">This is a success message</span>
+                        <span class="form-warning">This is a warning message</span>
+                        <span class="form-loading">Please wait...</span>
+        
+                    
+                </n-form-field>
+                
+            </div>
+        </div>
         
     </div>
 </div>
-<pre>
-1 {{nformfield.form.foo | json}}
-2 {{nformfield.form.foo.$pending | json}}
-</pre>

@@ -97,7 +97,7 @@
 @include foundation-flex-classes;
 
 @import "../../bower_components/n-uib-foundation-tpls/src/n-uib-foundation-tpls";
-@import "../common/nFormField/nFormField";
+@import "../common/n-form-field/n-form-field";
 @import "../common/nFoundationExtras/nFoundationExtras";
 
 //@import "../common/n-uib-foundation-tpls/n-uib-foundation-tpls.scss";
@@ -122,6 +122,7 @@
 /* ---> Do not delete this comment (Directives) <--- */
 
 // Components
+@import "../common/n-foundation-switch/n-foundation-switch";
 /* ---> Do not delete this comment (Components) <--- */
 
 // Modules
@@ -145,4 +146,9 @@
 @import "../modules/timepicker/timepicker";
 @import "../modules/typeahead/typeahead";
 @import "../modules/nFormField/nFormField";
+@import "../modules/nEmail/nEmail";
+@import "../modules/nEmailNstackValidation/nEmailNstackValidation";
+@import "../modules/nFoundationExtras/nFoundationExtras";
+@import "../modules/nFoundationSwitch/nFoundationSwitch";
+@import "../modules/nRangeInput/nRangeInput";
 /* ---> Do not delete this comment (Modules) <--- */

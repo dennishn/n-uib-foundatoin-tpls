@@ -1,0 +1,9 @@
+@include headings() {
+	&.text-weight-light {
+		font-weight: $global-weight-light;
+	}
+}
+.text-weight-light,
+p.text-weight-light {
+	font-weight: $global-weight-light;
+}

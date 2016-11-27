@@ -1,0 +1,43 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>nEmailNStackValidator</h3>
+        <p>Check the DNS availability of an email address</p>
+    </div>
+</div>
+
+<form novalidate name="nemailnstackvalidator.form">
+    <div class="row">
+        <div class="small-12 columns">
+            <n-form-field is-error="(nemailnstackvalidator.form.foo.$invalid && !nemailnstackvalidator.form.foo.$error.asyncEmail) || false"
+                          is-warning="(nemailnstackvalidator.form.foo.$invalid && nemailnstackvalidator.form.foo.$error.nStackEmail && !nemailnstackvalidator.form.foo.$pending) || false"
+                          is-success="nemailnstackvalidator.form.foo.$valid && !nemailnstackvalidator.form.foo.$pristine && !nemailnstackvalidator.form.foo.$pending"
+                          is-loading="nemailnstackvalidator.form.foo.$pending">
+                <label for="foo" n-form-field-label>
+                    Label Text
+                    <input name="foo"
+                           id="foo"
+                           type="email"
+                           n-form-field-input
+                           n-email-nstack-validator
+                           n-email
+                           ng-model="nemailnstackvalidator.fooModel">
+                    <span class="form-error"
+                          ng-messages="nemailnstackvalidator.form.foo.$error"
+                          ng-messages-multiple
+                          role="alert">
+                        <span ng-message="required">required</span>
+                        <span ng-message="email">email</span>
+                    </span>
+                    <span class="form-success">This is a success message</span>
+                    <span class="form-warning">{{nemailnstackvalidator.form.foo.nStackEmailMessage}}</span>
+                    <span class="form-loading">Please wait...</span>
+                </label>
+            </n-form-field>
+        </div>
+        <div class="small-12 columns">
+<pre>
+$error: {{nemailnstackvalidator.form.foo.$error | json}}
+</pre>
+        </div>
+    </div>
+</form>

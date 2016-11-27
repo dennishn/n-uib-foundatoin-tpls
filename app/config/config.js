@@ -12,7 +12,8 @@
 		'nEmailNStackValidator',
 		'APPLICATION_SETTINGS',
 		'angular-loading-bar',
-		'cgBusy'
+		'cgBusy',
+		'ngTouch'
 	]);
 
 	core.value('cgBusyDefaults', {
@@ -32,7 +33,12 @@
 					   $urlRouterProvider,
 					   $locationProvider,
 					   cfpLoadingBarProvider,
+					   $touchProvider,
 					   $httpProvider) {
+		
+		console.warn($touchProvider.ngClickOverrideEnabled())
+		$touchProvider.ngClickOverrideEnabled(true)
+		console.warn($touchProvider.ngClickOverrideEnabled())
 
 		if($logProvider.debugEnabled && DEBUG_ENV) {
 			$logProvider.debugEnabled(true);

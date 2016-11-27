@@ -1,0 +1,81 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>
+            n-foundation-switch
+        </h3>
+    </div>
+</div>
+<form name="nfoundationswitch.form" novalidate>
+    <div class="row">
+        <div class="small-12 columns">
+            <p class="lead">Without ngTrue/False value attribute</p>
+        </div>
+        <div class="small-12 columns">
+            <n-foundation-switch
+                    name="boring"
+                    ng-change="nfoundationswitch.onChange()"
+                    ng-model="nfoundationswitch.switchModel">
+            </n-foundation-switch>
+        </div>
+        <div class="small-12 columns">
+<pre>
+model: {{nfoundationswitch.switchModel | json}}
+</pre>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="small-12 columns">
+            <p class="lead">With ngTrue/False value attribute</p>
+        </div>
+        <div class="small-12 columns">
+            <n-foundation-switch
+                    name="awesome"
+                    ng-true-value="'AWESOME'"
+                    ng-false-value="'LAME'"
+                    ng-change="nfoundationswitch.onChange()"
+                    ng-model="nfoundationswitch.switchNgValue">
+            </n-foundation-switch>
+        </div>
+        <div class="small-12 columns">
+<pre>
+model: {{nfoundationswitch.switchNgValue | json}}
+</pre>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="small-12 columns">
+            <p class="lead">Using nFormField</p>
+        </div>
+        <div class="small-12 columns">
+            <n-form-field is-error="nfoundationswitch.switchModel === false"
+                          is-success="nfoundationswitch.switchModel === true">
+                <label for="super" n-form-field-label>Label Text</label>
+                <n-foundation-switch
+                        n-form-field-input
+                        name="super"
+                        ng-change="nfoundationswitch.onChange()"
+                        ng-model="nfoundationswitch.switchModel">
+                </n-foundation-switch>
+                <span class="form-error" role="alert">Please turn me on</span>
+                <span class="form-success">You turned me on</span>
+            </n-form-field>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="small-12 columns"></div>
+        <div class="small-12 columns">
+            <button class="button" ng-click="nfoundationswitch.switchModel = !nfoundationswitch.switchModel">Toggle Switch</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="small-12 columns">
+<pre>
+form: {{nfoundationswitch.form | json}}
+</pre>
+        </div>
+    </div>
+</form>

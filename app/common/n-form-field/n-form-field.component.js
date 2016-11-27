@@ -47,15 +47,12 @@
 			}
 		};
 		
-		var $label = $element.find('label');
-		var $input = $element.find('input');
-		
-		var inputName = $interpolate($input.attr('name') || '')($scope);
-		if(!inputName) {
-			throw new $exceptionHandler('attribute name is required');
-		}
+		var $label = $element.find('[n-form-field-label]');
+		var $input = $element.find('[n-form-field-input]');
+		var $inputGroupLabel = $element.find('.input-group-label');
 		
 		vm.$onInit = function() {
+			
 			$scope.$watch(function() {
 				return vm.isError;
 			}, onValidityChanged);
@@ -80,6 +77,7 @@
 			var $errorTxt = $element.find('.form-error');
 			
 			$label.toggleClass(CLASSES.error['label'], newVal);
+			$inputGroupLabel.toggleClass(CLASSES.error['label'], newVal);
 			$input.toggleClass(CLASSES.error['input'], newVal);
 			$errorTxt.toggleClass(CLASSES.error['text'], newVal);
 		}
@@ -91,6 +89,7 @@
 			var $successTxt = $element.find('.form-success');
 			
 			$label.toggleClass(CLASSES.success['label'], newVal);
+			$inputGroupLabel.toggleClass(CLASSES.success['label'], newVal);
 			$input.toggleClass(CLASSES.success['input'], newVal);
 			$successTxt.toggleClass(CLASSES.success['text'], newVal);
 		}
@@ -102,6 +101,7 @@
 			var $warningTxt = $element.find('.form-warning');
 			
 			$label.toggleClass(CLASSES.warning['label'], newVal);
+			$inputGroupLabel.toggleClass(CLASSES.warning['label'], newVal);
 			$input.toggleClass(CLASSES.warning['input'], newVal);
 			$warningTxt.toggleClass(CLASSES.warning['text'], newVal);
 		}
@@ -113,6 +113,7 @@
 			var $warningTxt = $element.find('.form-loading');
 
 			$label.toggleClass(CLASSES.loading['label'], newVal);
+			$inputGroupLabel.toggleClass(CLASSES.loading['label'], newVal);
 			$input.toggleClass(CLASSES.loading['input'], newVal);
 			$warningTxt.toggleClass(CLASSES.loading['text'], newVal);
 		}
