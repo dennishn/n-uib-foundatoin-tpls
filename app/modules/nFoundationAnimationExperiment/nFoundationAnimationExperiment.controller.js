@@ -12,15 +12,22 @@
 		.controller('NFoundationAnimationExperimentController', NFoundationAnimationExperiment);
 
 	/* @ngInject */
-	function NFoundationAnimationExperiment() {
+	function NFoundationAnimationExperiment($uibModal) {
 		/*jshint validthis: true */
 		var vm = this;
 
-		activate();
-
-		function activate() {
-
+		vm.openModal = openModal;
+		
+		function openModal() {
+			var modalInstance = $uibModal.open({
+				animation: false,
+				ariaLabelledBy: 'modal-title',
+				ariaDescribedBy: 'modal-body',
+				template: '<p>Look at me, I am the Modal now!</p>',
+				windowClass: 'anim-exp-modal'
+			});
 		}
+		
 	}
 
 })();

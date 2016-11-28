@@ -16,7 +16,7 @@
 				url: '/nfoundationanimationexperiment',
 				views: {
 					'application@application': {
-						templateUrl: 'modules\nFoundationAnimationExperiment/nfoundationanimationexperiment.template.html',
+						templateUrl: 'modules/nFoundationAnimationExperiment/nfoundationanimationexperiment.template.html',
 						controller: 'NFoundationAnimationExperimentController',
 						controllerAs: 'nfoundationanimationexperiment'
 					}
