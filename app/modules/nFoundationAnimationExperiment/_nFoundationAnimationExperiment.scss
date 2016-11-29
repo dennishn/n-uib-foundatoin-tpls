@@ -1,3 +1,52 @@
-.nFoundationAnimationExperiment {
+/*
+  For this experiment, we using the outer reveal-container as the wrapper for our content.
+  This way we can animate the reveal-container without being disturbed by the below props.
+*/
+.anim-exp-modal {
+  .reveal {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    overflow: hidden;
+    margin-right: 0;
+    margin-left: 0;
+  }
 
+  .anim-exp-modal__content {
+    @include reveal-modal-base();
+    display: block;
+    position: relative;
+    width: 100%;
+    border: none;
+  }
+
+  .anim-exp-modal--out p {
+    visibility: hidden;
+  }
+}
+.modal-backdrop {
+  //opacity: 0;
+  transition: opacity .2s;
+  &.ng-animate {
+    transition: opacity .2s;
+  }
+  &.ng-enter {
+    opacity: 0;
+  }
+  &.ng-enter-active {
+    opacity: 1;
+  }
+  &.ng-leave {
+    opacity: 1;
+    transition-delay: .5s;
+    .anim-exp-modal--out p {
+      visibility: hidden;
+    }
+  }
+  &.ng-leave-active {
+    opacity: 0;
+    .anim-exp-modal--out p {
+      visibility: hidden;
+    }
+  }
 }

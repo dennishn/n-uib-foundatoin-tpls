@@ -18,14 +18,15 @@
 
 		vm.openModal = openModal;
 		
-		function openModal() {
+		function openModal(referrerId) {
 			var modalInstance = $uibModal.open({
 				animation: false,
 				ariaLabelledBy: 'modal-title',
 				ariaDescribedBy: 'modal-body',
-				template: '<p>Look at me, I am the Modal now!</p>',
+				template: '<div anim-exp-modal-referrer-id="' + referrerId + '" class="anim-exp-modal__content"><p>Look at me, I am the Modal now!</p></div>',
 				windowClass: 'anim-exp-modal'
 			});
+
 		}
 		
 	}
