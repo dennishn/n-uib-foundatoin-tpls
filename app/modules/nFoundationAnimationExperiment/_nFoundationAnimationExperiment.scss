@@ -3,13 +3,17 @@
   This way we can animate the reveal-container without being disturbed by the below props.
 */
 .anim-exp-modal {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
   .reveal {
+    top: auto;
+    position: static;
     padding: 0;
     border: none;
     background-color: transparent;
     overflow: hidden;
-    margin-right: 0;
-    margin-left: 0;
+    margin: 0 !important;
   }
 
   .anim-exp-modal__content {
@@ -18,35 +22,23 @@
     position: relative;
     width: 100%;
     border: none;
+    background-color: mediumaquamarine;
   }
 
-  .anim-exp-modal--out p {
-    visibility: hidden;
-  }
 }
-.modal-backdrop {
-  //opacity: 0;
-  transition: opacity .2s;
-  &.ng-animate {
-    transition: opacity .2s;
+
+.anim-exp-dropdown {
+  perspective: 1000px;
+  position: relative;
+  .button {
+    z-index: 1;
+    outline: none;
   }
-  &.ng-enter {
-    opacity: 0;
-  }
-  &.ng-enter-active {
-    opacity: 1;
-  }
-  &.ng-leave {
-    opacity: 1;
-    transition-delay: .5s;
-    .anim-exp-modal--out p {
-      visibility: hidden;
-    }
-  }
-  &.ng-leave-active {
-    opacity: 0;
-    .anim-exp-modal--out p {
-      visibility: hidden;
-    }
+  .dropdown-pane {
+    display: block;
+    z-index: 0;
+    position: relative;
+    transform: rotateX(-90deg);
+    transform-origin: top left;
   }
 }

@@ -1,0 +1,68 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Open Iconic <small>Icon Font</small></h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <a href="#" class="button"><i class="fi-chevron-left"></i> FooBar <i class="fi-globe"></i></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Colors <i class="fi-chevron-right"></i>
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button ng-click="openIcons.clearColor()" class="button" style="background: transparent; color: inherit;">None</button>
+            <button ng-click="openIcons.selectColor('primary')" class="button primary">Primary</button>
+            <button ng-click="openIcons.selectColor('secondary')" class="button secondary">Secondary</button>
+            <button ng-click="openIcons.selectColor('info')" class="button info">Info</button>
+            <button ng-click="openIcons.selectColor('success')" class="button success">Success</button>
+            <button ng-click="openIcons.selectColor('warning')" class="button warning">Warning</button>
+            <button ng-click="openIcons.selectColor('alert')" class="button alert">Alert</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Search
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <input type="text" ng-model="openIcons.searchTerm">
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Modifiers
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button ng-click="openIcons.clearModifier()" class="button" style="background: transparent; color: inherit;">None</button>
+            <button ng-click="openIcons.selectModifier('horizontal')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+            <button ng-click="openIcons.selectModifier('vertical')" class="button" style="background: transparent; color: inherit;">Flip Vertical</button>
+            <button ng-click="openIcons.selectModifier('horizontal-vertical')" class="button" style="background: transparent; color: inherit;">Flip Horizontal & Vertical</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns clearfix">
+        <span ng-repeat="icon in openIcons.icons | filter: openIcons.searchTerm" class="open-iconic-icon">
+            <span uib-tooltip="{{::icon}}" class="open-iconic-icon__container">
+                <i class="{{openIcons.selectedModifier}} {{openIcons.selectedColor}} {{::icon}}"></i>
+                <span class="open-iconic-icon__name">{{::icon}}</span>
+            </span>
+        </span>
+    </div>
+</div>

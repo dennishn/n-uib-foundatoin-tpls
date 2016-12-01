@@ -96,9 +96,24 @@
 @include foundation-float-classes;
 @include foundation-flex-classes;
 
+
 @import "../../bower_components/n-uib-foundation-tpls/src/n-uib-foundation-tpls";
 @import "../common/n-form-field/n-form-field";
 @import "../common/nFoundationExtras/nFoundationExtras";
+
+@include n-uib-foundation-accordion;
+@include n-uib-foundation-alert-contextual-styles;
+@include n-uib-foundation-alert-fade-animation;
+@include n-uib-foundation-button-contextual-styles;
+@include n-uib-foundation-collapse;
+@include n-uib-foundation-collapse-animation;
+@include n-uib-foundation-datepicker;
+@include n-uib-foundation-datepicker-popup;
+@include n-uib-foundation-dropdown;
+@include n-uib-foundation-modal;
+@include n-uib-foundation-modal-animation;
+@include n-uib-foundation-timepicker;
+
 
 //@import "../common/n-uib-foundation-tpls/n-uib-foundation-tpls.scss";
 
@@ -161,4 +176,5 @@
 @import "../modules/nFoundationResponsiveNavigation/nFoundationResponsiveNavigation";
 @import "../modules/nFoundationMagellan/nFoundationMagellan";
 @import "../modules/nFoundationAnimationExperiment/nFoundationAnimationExperiment";
+@import "../modules/open-iconic-icons/open-iconic-icons";
 /* ---> Do not delete this comment (Modules) <--- */

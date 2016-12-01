@@ -1,0 +1,29 @@
+// DEMO DOCS
+.open-iconic-icon {
+	display: block;
+	float: left;
+	width: 16.6667%;
+	margin-bottom: 20px;
+}
+
+.open-iconic-icon__container {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	min-height: 96px;
+	margin: 20px;
+
+	border: 1px solid $light-gray;
+}
+.open-iconic-icon__name {
+	position: absolute;
+	bottom: 2px;
+	left: 0;
+	width: 100%;
+
+	font-size: 10px;
+	text-align: center;
+	color: $dark-gray;
+}

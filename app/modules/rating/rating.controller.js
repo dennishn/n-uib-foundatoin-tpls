@@ -26,12 +26,13 @@
 		};
 		
 		vm.ratingStates = [
-			{stateOff: 'sentiment_very_dissatisfied'},
-			{stateOn: 'local_pizza', stateOff: 'local_bar'},
-			{stateOn: 'spa', stateOff: 'pool'},
-			{stateOn: 'whatshot'},
-			{stateOn: 'train', stateOff: 'tram'}
+			{stateOff: 'fi-aperture'},
+			{stateOn: 'fi-audio-spectrum', stateOff: 'fi-clock'},
+			{stateOn: 'fi-home', stateOff: 'fi-infinity'},
+			{stateOn: 'fi-pin'},
+			{stateOn: 'fi-lightbulb', stateOff: 'fi-globe'}
 		];
+		
 	}
 
 })();
