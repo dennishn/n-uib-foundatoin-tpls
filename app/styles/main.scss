@@ -49,6 +49,7 @@
 
 // bower:scss
 @import "bower_components/foundation-sites/scss/foundation.scss";
+@import "bower_components/open-color/open-color.scss";
 // endbower
 
 /*
@@ -176,5 +177,6 @@
 @import "../modules/nFoundationResponsiveNavigation/nFoundationResponsiveNavigation";
 @import "../modules/nFoundationMagellan/nFoundationMagellan";
 @import "../modules/nFoundationAnimationExperiment/nFoundationAnimationExperiment";
-@import "../modules/open-iconic-icons/open-iconic-icons";
+@import "../modules/font-awesome-icons/_font-awesome-icons";
 /* ---> Do not delete this comment (Modules) <--- */
+

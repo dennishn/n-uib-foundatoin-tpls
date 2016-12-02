@@ -7,18 +7,18 @@
 	 * @description
 	 *
 	 */
-	angular.module('openIconicIcons')
+	angular.module('fontAwesomeIcons')
 		/* @ngInject */
 		.config(function($stateProvider) {
 
 			var OpenIconicIcons = {
-				name: 'application.openiconicicons',
-				url: '/open-iconic-icons',
+				name: 'application.fontawesome',
+				url: '/font-awesome-icons',
 				views: {
 					'application@application': {
-						templateUrl: 'modules/open-iconic-icons/open-iconic-icons.template.html',
-						controller: 'OpenIconicIconsController',
-						controllerAs: 'openIcons'
+						templateUrl: 'modules/font-awesome-icons/font-awesome-icons.template.html',
+						controller: 'FontAwesomeIconsController',
+						controllerAs: 'fontAweseome'
 					}
 				}
 			};

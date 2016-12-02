@@ -63,7 +63,7 @@
 			'nFoundationMagellanModule',
 			'nFoundationMagellan',
 			'nFoundationAnimationExperiment',
-			'openIconicIcons',
+			'fontAwesomeIcons',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

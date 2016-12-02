@@ -1,0 +1,150 @@
+<div class="row">
+    <div class="small-12 columns">
+        <h3>Open Iconic <small>Icon Font</small></h3>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <button class="button" disabled>FooBar <i class="fa fa-spin fa-circle-o-notch"></i></button>
+        <button class="button">FooBar <i class="fa fa-spin fa-circle-o-notch"></i></button>
+        <button class="button">FooBar</button>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <a href="#" class="button tiny"><i class="fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button tiny">FooBar</a>
+        <a href="#" class="button small"><i class="fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button small">FooBar</i></a>
+        <a href="#" class="button"><i class="fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button">FooBar</a>
+        <a href="#" class="button large"><i class="fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button large">FooBar</a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <a href="#" class="button tiny"><i class="fa-lg fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button small"><i class="fa-2x fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button"><i class="fa-3x fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button large"><i class="fa-4x fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+        <a href="#" class="button large"><i class="fa-5x fa fa-check-circle"></i> FooBar <i class="fa fa-check-square"></i></a>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <ul class="fa-ul">
+            <li><i class="fa-li fa fa-check-square"></i>List icons</li>
+            <li><i class="fa-li fa fa-check-square"></i>can be used</li>
+            <li><i class="fa-li fa fa-spinner fa-spin"></i>as bullets</li>
+            <li><i class="fa-li fa fa-square"></i>in lists</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-4 columns">
+        <p>
+            <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>
+            ...tomorrow we will run faster, stretch out our arms farther...
+            And then one fine morning&mdash; So we beat on, boats against the
+            current, borne back ceaselessly into the past.
+        </p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+        <i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i>
+        <i class="fa fa-spin fa-circle-o-notch fa-3x fa-fw"></i>
+        <i class="fa fa-pulse fa-circle-o-notch fa-3x fa-fw"></i>
+        <i class="fa fa-spin fa-refresh fa-3x fa-fw"></i>
+        <i class="fa fa-pulse fa-refresh fa-3x fa-fw"></i>
+        <i class="fa fa-spin fa-cog fa-3x fa-fw"></i>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <span class="fa-stack fa-lg">
+          <i class="text-color-primary fa fa-square-o fa-stack-2x"></i>
+          <i class="fa fa-twitter fa-stack-1x"></i>
+        </span>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-circle fa-stack-2x"></i>
+          <i class="fa fa-flag fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-square fa-stack-2x"></i>
+          <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+        </span>
+        <span class="fa-stack fa-lg">
+          <i class="fa fa-camera fa-stack-1x"></i>
+          <i class="fa fa-ban fa-stack-2x text-color-alert"></i>
+        </span>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Colors <i class="fi-chevron-right"></i>
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button ng-click="fontAweseome.clearColor()" class="button" style="background: transparent; color: inherit;">None</button>
+            <button ng-click="fontAweseome.selectColor('primary')" class="button primary">Primary</button>
+            <button ng-click="fontAweseome.selectColor('secondary')" class="button secondary">Secondary</button>
+            <button ng-click="fontAweseome.selectColor('info')" class="button info">Info</button>
+            <button ng-click="fontAweseome.selectColor('success')" class="button success">Success</button>
+            <button ng-click="fontAweseome.selectColor('warning')" class="button warning">Warning</button>
+            <button ng-click="fontAweseome.selectColor('alert')" class="button alert">Alert</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Search
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <input type="text" ng-model="fontAweseome.searchTerm">
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
+        <p>
+            Modifiers
+        </p>
+    </div>
+    <div class="small-12 columns">
+        <div class="button-group">
+            <button ng-click="fontAweseome.clearModifier()" class="button" style="background: transparent; color: inherit;">None</button>
+            <button ng-click="fontAweseome.selectModifier('fa-rotate-90')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+            <button ng-click="fontAweseome.selectModifier('fa-rotate-180')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+            <button ng-click="fontAweseome.selectModifier('fa-rotate-270')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+            <button ng-click="fontAweseome.selectModifier('fa-flip-horizontal')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+            <button ng-click="fontAweseome.selectModifier('fa-flip-vertical')" class="button" style="background: transparent; color: inherit;">Flip Horizontal</button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns clearfix">
+        <span ng-repeat="icon in fontAweseome.icons | filter: fontAweseome.searchTerm" class="font-awesome-icon">
+            <span uib-tooltip="{{::icon}}" class="font-awesome-icon__container">
+                <i class="{{fontAweseome.selectedModifier}} {{fontAweseome.selectedColor}} fa {{::icon}}"></i>
+                <span class="font-awesome-icon__name">{{::icon}}</span>
+            </span>
+        </span>
+    </div>
+</div>

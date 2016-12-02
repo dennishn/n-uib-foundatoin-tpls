@@ -7,6 +7,22 @@
 
 <div class="row">
     <div class="small-12 columns">
+        <p class="lead">Utility Classes</p>
+    </div>
+    <div class="small-12 columns">
+        <div style="margin: 5px; float: left; display: flex; align-items: center; justify-content: center; width: 250px; height: 100px;"
+             class="background-color-{{class}}"
+             ng-repeat="class in nfoundationextras.colorClasses">
+            <pre>{{class}}</pre>
+        </div>
+    </div>
+    <div class="small-12 columns">
+        <p ng-repeat="class in nfoundationextras.colorClasses" class="text-color-{{class}}">{{class}}</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="small-12 columns">
         <p class="lead">Extended Typography</p>
     </div>
     <div class="small-12 columns">
@@ -425,22 +441,6 @@
                 <p class="list-group__item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, cumque?</p>
             </div>
         </div>
-    </div>
-</div>
-
-<div class="row">
-    <div class="small-12 columns">
-        <p class="lead">Utility Classes</p>
-    </div>
-    <div class="small-12 columns">
-        <div style="margin: 5px; float: left; display: flex; align-items: center; justify-content: center; width: 250px; height: 100px;"
-             class="background-color-{{class}}"
-             ng-repeat="class in nfoundationextras.colorClasses">
-            <pre>{{class}}</pre>
-        </div>
-    </div>
-    <div class="small-12 columns">
-        <p ng-repeat="class in nfoundationextras.colorClasses" class="text-color-{{class}}">{{class}}</p>
     </div>
 </div>
 

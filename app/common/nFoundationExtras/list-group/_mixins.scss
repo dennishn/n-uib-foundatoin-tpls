@@ -43,7 +43,7 @@
 		&.disabled,
 		&:disabled {
 			background-color: lighten($background, 25%);
-			color: $color;
+			color: darken($black, 25%);
 		}
 	}
 

@@ -26,11 +26,11 @@
 		};
 		
 		vm.ratingStates = [
-			{stateOff: 'fi-aperture'},
-			{stateOn: 'fi-audio-spectrum', stateOff: 'fi-clock'},
-			{stateOn: 'fi-home', stateOff: 'fi-infinity'},
-			{stateOn: 'fi-pin'},
-			{stateOn: 'fi-lightbulb', stateOff: 'fi-globe'}
+			{stateOff: 'fa fa-microchip'},
+			{stateOn: 'fa fa-ravelry', stateOff: 'fa fa-user-o'},
+			{stateOn: 'fa fa-female', stateOff: 'fa fa-male'},
+			{stateOn: 'fa fa-film'},
+			{stateOn: 'fa fa-close', stateOff: 'fa fa-fire'}
 		];
 		
 	}

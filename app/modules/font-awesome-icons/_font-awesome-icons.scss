@@ -1,12 +1,12 @@
 // DEMO DOCS
-.open-iconic-icon {
+.font-awesome-icon {
 	display: block;
 	float: left;
 	width: 16.6667%;
 	margin-bottom: 20px;
 }
 
-.open-iconic-icon__container {
+.font-awesome-icon__container {
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -17,7 +17,7 @@
 
 	border: 1px solid $light-gray;
 }
-.open-iconic-icon__name {
+.font-awesome-icon__name {
 	position: absolute;
 	bottom: 2px;
 	left: 0;
