@@ -1,4 +1,4 @@
-<div class="top-bar docs-topbar">
+<div class="top-bar l-n-docs__topbar c-n-docs__topbar">
     <div class="top-bar-title">
         <a ui-sref="application.index">
             Nodes Angular UI
@@ -60,7 +60,7 @@
                         <li ui-sref-active="active">
                             <a ui-sref="application.typeahead">Typeahead</a>
                         </li>
-    
+                        
                         <li>
                             <a href="">
                                 Utilities
@@ -78,7 +78,7 @@
                 </li>
             </ul>
         </n-foundation-dropdown-menu>
-
+        
         <n-foundation-dropdown-menu>
             <ul class="dropdown menu">
                 <li>
@@ -86,44 +86,64 @@
                         nComponents
                     </a>
                     <ul class="menu">
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nformfield">nFormField</a>
+                        <li>
+                            <a href="">
+                                Forms
+                            </a>
+                            <ul class="menu">
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nformfield">nFormField</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nemail">nEmail</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nemailnstackvalidator">nEmailNstackValidator</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nfoundationswitch">nFoundationSwitch</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nrangeinput">nRangeInput</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nemail">nEmail</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nemailnstackvalidator">nEmailNstackValidator</a>
-                        </li>
+                        
                         <li ui-sref-active="active">
                             <a ui-sref="application.nfoundationextras">nFoundationExtras</a>
                         </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nfoundationswitch">nFoundationSwitch</a>
+                        
+                        <li>
+                            <a href="">
+                                nFoundation Menus
+                            </a>
+                            <ul class="menu">
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nfoundationdropdownmenu">nFoundationDropdownMenu</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nfoundationdrilldownmenu">nFoundationDrilldownMenu</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nfoundationaccordionmenu">nFoundationAccordionMenu</a>
+                                </li>
+                                <li ui-sref-active="active">
+                                    <a ui-sref="application.nfoundationresponsivenavigation">nFoundationResponsiveNavigation</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nrangeinput">nRangeInput</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nfoundationdropdownmenu">nFoundationDropdownMenu</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nfoundationdrilldownmenu">nFoundationDrilldownMenu</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nfoundationaccordionmenu">nFoundationAccordionMenu</a>
-                        </li>
-                        <li ui-sref-active="active">
-                            <a ui-sref="application.nfoundationresponsivenavigation">nFoundationResponsiveNavigation</a>
-                        </li>
+                        
                         <li ui-sref-active="active">
                             <a ui-sref="application.nfoundationmagellan">nFoundationMagellan</a>
+                        </li>
+                        <li ui-sref-active="active">
+                            <a ui-sref="application.opencolors">Open Colors - Extended Color palette</a>
                         </li>
                     </ul>
                 </li>
             </ul>
         </n-foundation-dropdown-menu>
-
+        
         <n-foundation-dropdown-menu>
             <ul class="dropdown menu">
                 <li>
@@ -139,6 +159,6 @@
             </ul>
         </n-foundation-dropdown-menu>
     </div>
-    
+
 </div>
-<div ui-view="application"></div>
+<div class="l-n-docs__content" ui-view="application"></div>

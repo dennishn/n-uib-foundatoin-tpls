@@ -1,0 +1,32 @@
+.n-doc-palettes {}
+.n-doc-palette {}
+.n-doc-palette__background-color {
+	position: relative;
+	padding-bottom: 100%;
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+	pre {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		text-align: center;
+
+		font-size: 85%;
+	}
+}
+.n-doc-palette__text-color {
+	padding: 0 5px;
+	font-size: 85%;
+	text-align: center;
+}

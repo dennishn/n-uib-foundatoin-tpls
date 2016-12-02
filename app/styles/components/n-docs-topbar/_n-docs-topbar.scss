@@ -1,6 +1,8 @@
-.docs-topbar {
+.c-n-docs__topbar {
 	display: flex;
 	justify-content: space-between;
+
+	font-weight: $global-weight-light;
 
 	background-color: $black;
 
@@ -21,12 +23,13 @@
 		display: flex;
 		justify-content: flex-end;
 	}
-	
+
 	.menu {
 		width: auto;
 		background-color: $black;
+		border: none;
 	}
 	[uib-dropdown-menu] {
-		border: none;
+
 	}
 }

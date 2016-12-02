@@ -28,7 +28,8 @@
 			'dark-gray',
 			'black',
 			'white'
-		]
+		];
+		
 	}
 
 })();

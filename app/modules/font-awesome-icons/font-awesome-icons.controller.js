@@ -16,6 +16,8 @@
 		/*jshint validthis: true */
 		var vm = this;
 		
+		vm.isLoading = false;
+		
 		vm.icons = [
 			'fa-glass',
 			'fa-music',

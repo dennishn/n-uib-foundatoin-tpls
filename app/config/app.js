@@ -14,6 +14,7 @@
 			'APPLICATION_SETTINGS',
 			'ui.router',
 			'ui.bootstrap',
+			'ui.scrollpoint',
 			'angular-loading-bar',
 			'angulartics',
 			'angulartics.google.analytics',
@@ -64,6 +65,7 @@
 			'nFoundationMagellan',
 			'nFoundationAnimationExperiment',
 			'fontAwesomeIcons',
+			'openColorColors',
 			/* ---> Do not delete this comment (ngImports) <--- */
 	]);
 })();

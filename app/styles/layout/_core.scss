@@ -1,0 +1,19 @@
+html, body {
+	overflow: hidden;
+}
+
+.l-n-docs {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	flex-direction: column;
+}
+.l-n-docs__topbar {
+	flex: 0 0 auto;
+}
+.l-n-docs__content {
+	flex: 1;
+	overflow-y: auto;
+}

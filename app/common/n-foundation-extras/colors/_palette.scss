@@ -14,6 +14,16 @@
 		color: $value;
 	}
 }
+@each $key, $value in $oc-color-list {
+	@each $k, $v in $key {
+		.background-color-#{$value}-#{$k} {
+			background-color: $v;
+		}
+		.text-color-#{$value}-#{$k} {
+			color: $v;
+		}
+	}
+}
 
 .background-color-light-gray {
 	background-color: $light-gray;

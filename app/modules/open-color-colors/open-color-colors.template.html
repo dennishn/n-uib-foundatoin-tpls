@@ -1,0 +1,19 @@
+<p>This is the open-color-colors view.</p>
+
+<div class="row">
+    <div class="small-12 columns n-doc-palettes">
+        <div ng-repeat="color in openColors.ocColorClasses" class="n-doc-palette">
+            <h5>{{color.name}}</h5>
+            <div class="row small-up-1 medium-up-4">
+                <div ng-repeat="class in color.classes" class="column">
+                    <div class="n-doc-palette__background-color background-color-{{::class}}">
+                        <pre>.background-color-{{::class}}</pre>
+                    </div>
+                    <span class="n-doc-palette__text-color">
+                        <pre class="text-color-{{::class}}">.text-color-{{::class}}</pre>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
